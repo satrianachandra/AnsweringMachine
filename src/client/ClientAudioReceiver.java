@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package audiopipeline;
+package client;
 
 import java.io.File;
 import org.gstreamer.Caps;
@@ -13,7 +13,7 @@ import org.gstreamer.Pad;
 import org.gstreamer.PadLinkReturn;
 import org.gstreamer.Pipeline;
 import util.Util;
-import voicemail.Config;
+import util.Config;
 
 /**
  *
@@ -33,10 +33,14 @@ public class ClientAudioReceiver extends Pipeline {
     
     public ClientAudioReceiver(){
         super();
-        
+        System.out.println("ha0");
         final Element rtpSource = ElementFactory.make("udpsrc", null);
         //ask for port
         rtpSource.set("port", 0);
+        
+        
+        System.out.println("ha1");
+        
         Util.doOrDie("caps",
                         rtpSource.getStaticPad("src").setCaps(
                                         Caps.fromString("application/x-rtp,"
@@ -56,6 +60,8 @@ public class ClientAudioReceiver extends Pipeline {
         //to autoaudiosink
         final Element audiosink = ElementFactory.make("autoaudiosink", null);
 
+        System.out.println("ha2");
+        
         // ############## ADD THEM TO PIPELINE ####################
         addMany(rtpSource, rtpBin, rtpDepay, speexdec, audioresample,
                     audioconvert, audiosink);
@@ -84,6 +90,7 @@ public class ClientAudioReceiver extends Pipeline {
                         audioconvert, audiosink));
 
         pause();
+        
         port = (Integer) rtpSource.get("port");
         System.out.println("Client started receving on "+port);
         

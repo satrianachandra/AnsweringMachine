@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package audiopipeline;
+package server;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -15,7 +15,7 @@ import org.gstreamer.Pad;
 import org.gstreamer.PadLinkReturn;
 import org.gstreamer.Pipeline;
 import util.Util;
-import voicemail.Config;
+import util.Config;
 
 /**
  *

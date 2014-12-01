@@ -26815,3 +26815,355 @@ Content-Length: 0
 ]]>
 </message>
 
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417475120478"
+isSender="false" 
+transactionId="z9hg4bk-3834-2b0245074c9bb4f191432f30694a91c0" 
+callId="7908a2f19556a2bc1b703b37b027bb07@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 7908a2f19556a2bc1b703b37b027bb07@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3834-2b0245074c9bb4f191432f30694a91c0
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/sdp
+Content-Length: 168
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417475120857"
+isSender="true" 
+transactionId="z9hg4bk-3834-2b0245074c9bb4f191432f30694a91c0" 
+callId="7908a2f19556a2bc1b703b37b027bb07@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 7908a2f19556a2bc1b703b37b027bb07@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3834-2b0245074c9bb4f191432f30694a91c0
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417475121512"
+isSender="true" 
+transactionId="z9hg4bk-3834-2b0245074c9bb4f191432f30694a91c0" 
+callId="7908a2f19556a2bc1b703b37b027bb07@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 INVITE
+Call-ID: 7908a2f19556a2bc1b703b37b027bb07@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>;tag=4321
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3834-2b0245074c9bb4f191432f30694a91c0
+Contact: "Voicemail" <sip:127.0.0.1:52617>
+Content-Type: application/sdp
+Content-Length: 168
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417475121547"
+isSender="false" 
+transactionId="z9hg4bk-3834-0caea2cd5e1b4b3fde56b9fe465ff450" 
+callId="7908a2f19556a2bc1b703b37b027bb07@127.0.0.1" 
+firstLine="ACK sip:127.0.0.1:52617 SIP/2.0" 
+>
+<![CDATA[ACK sip:127.0.0.1:52617 SIP/2.0
+Call-ID: 7908a2f19556a2bc1b703b37b027bb07@127.0.0.1
+CSeq: 1 ACK
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3834-0caea2cd5e1b4b3fde56b9fe465ff450
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>;tag=4321
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+ERROR - Not supported yet.
+java.lang.UnsupportedOperationException: Not supported yet.
+	at server.VoiceMailServer.processTransactionTerminated(VoiceMailServer.java:165)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:427)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417475495322"
+isSender="false" 
+transactionId="z9hg4bk-313937-60a1422ba6d52e7e3c19c9acd94fa2b7" 
+callId="ecc023036cd394371f97b3009e563396@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: ecc023036cd394371f97b3009e563396@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313937-60a1422ba6d52e7e3c19c9acd94fa2b7
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/sdp
+Content-Length: 168
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417475495735"
+isSender="true" 
+transactionId="z9hg4bk-313937-60a1422ba6d52e7e3c19c9acd94fa2b7" 
+callId="ecc023036cd394371f97b3009e563396@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: ecc023036cd394371f97b3009e563396@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313937-60a1422ba6d52e7e3c19c9acd94fa2b7
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417475495828"
+isSender="false" 
+transactionId="z9hg4bk-313937-60a1422ba6d52e7e3c19c9acd94fa2b7" 
+callId="ecc023036cd394371f97b3009e563396@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: ecc023036cd394371f97b3009e563396@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313937-60a1422ba6d52e7e3c19c9acd94fa2b7
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/sdp
+Content-Length: 168
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417475496028"
+isSender="true" 
+transactionId="z9hg4bk-313937-60a1422ba6d52e7e3c19c9acd94fa2b7" 
+callId="ecc023036cd394371f97b3009e563396@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 INVITE
+Call-ID: ecc023036cd394371f97b3009e563396@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>;tag=4321
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313937-60a1422ba6d52e7e3c19c9acd94fa2b7
+Contact: "Voicemail" <sip:127.0.0.1:51351>
+Content-Type: application/sdp
+Content-Length: 168
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417475496199"
+isSender="false" 
+transactionId="z9hg4bk-313937-9b1a36e74c6c999fa0c06babb2d2dcd0" 
+callId="ecc023036cd394371f97b3009e563396@127.0.0.1" 
+firstLine="ACK sip:127.0.0.1:51351 SIP/2.0" 
+>
+<![CDATA[ACK sip:127.0.0.1:51351 SIP/2.0
+Call-ID: ecc023036cd394371f97b3009e563396@127.0.0.1
+CSeq: 1 ACK
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313937-9b1a36e74c6c999fa0c06babb2d2dcd0
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>;tag=4321
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417475805235"
+isSender="false" 
+transactionId="z9hg4bk-313730-3f2c9159bb91ac528a186b5d91f1cf4b" 
+callId="f2bebc3bbfcc1a27578e82b073f823b1@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: f2bebc3bbfcc1a27578e82b073f823b1@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313730-3f2c9159bb91ac528a186b5d91f1cf4b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/sdp
+Content-Length: 168
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417475805601"
+isSender="true" 
+transactionId="z9hg4bk-313730-3f2c9159bb91ac528a186b5d91f1cf4b" 
+callId="f2bebc3bbfcc1a27578e82b073f823b1@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: f2bebc3bbfcc1a27578e82b073f823b1@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313730-3f2c9159bb91ac528a186b5d91f1cf4b
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417475805747"
+isSender="false" 
+transactionId="z9hg4bk-313730-3f2c9159bb91ac528a186b5d91f1cf4b" 
+callId="f2bebc3bbfcc1a27578e82b073f823b1@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: f2bebc3bbfcc1a27578e82b073f823b1@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313730-3f2c9159bb91ac528a186b5d91f1cf4b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/sdp
+Content-Length: 168
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417475805915"
+isSender="true" 
+transactionId="z9hg4bk-313730-3f2c9159bb91ac528a186b5d91f1cf4b" 
+callId="f2bebc3bbfcc1a27578e82b073f823b1@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 INVITE
+Call-ID: f2bebc3bbfcc1a27578e82b073f823b1@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>;tag=4321
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313730-3f2c9159bb91ac528a186b5d91f1cf4b
+Contact: "Voicemail" <sip:127.0.0.1:56954>
+Content-Type: application/sdp
+Content-Length: 168
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417475805961"
+isSender="false" 
+transactionId="z9hg4bk-313730-f652cf5d14dca111ca82d58703489279" 
+callId="f2bebc3bbfcc1a27578e82b073f823b1@127.0.0.1" 
+firstLine="ACK sip:127.0.0.1:56954 SIP/2.0" 
+>
+<![CDATA[ACK sip:127.0.0.1:56954 SIP/2.0
+Call-ID: f2bebc3bbfcc1a27578e82b073f823b1@127.0.0.1
+CSeq: 1 ACK
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313730-f652cf5d14dca111ca82d58703489279
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>;tag=4321
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+ERROR - Not supported yet.
+java.lang.UnsupportedOperationException: Not supported yet.
+	at server.VoiceMailServer.processTransactionTerminated(VoiceMailServer.java:165)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:427)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)

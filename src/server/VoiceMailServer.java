@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package voicemail;
+package server;
 
-import audiopipeline.BusyTone;
-import audiopipeline.MessageRecorder;
+import util.Config;
+import server.BusyTone;
+import server.MessageRecorder;
 import gov.nist.javax.sip.address.SipUri;
 import java.text.ParseException;
 import java.util.ArrayList;

@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package voicemail;
+package client;
 
-import audiopipeline.ClientAudioReceiver;
-import audiopipeline.ClientAudioSender;
+import util.Config;
+import client.ClientAudioReceiver;
+import client.ClientAudioSender;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -55,7 +56,9 @@ import util.SdpTool;
  *
  * @author chandra
  */
-public class VoiceMailClient implements SipListener{
+public class SipListenerClient implements SipListener{
+    
+    private Client client;
     
     private AddressFactory addressFactory;
     private MessageFactory messageFactory;
@@ -71,26 +74,17 @@ public class VoiceMailClient implements SipListener{
     private String myAddress;
     /** SIP listening port */
     private int myPort;
-    /** Main application API */
-    //private App app;
     
    // private int myRTPPort;
-    private ClientAudioReceiver caReceiver;
-    private ClientAudioSender caSender;
     
-
-    public VoiceMailClient(){
+    public SipListenerClient(Client clientt){
         this.myAddress = Config.myClientAddress;
         this.myPort = Config.clientPort;
-      //  this.myRTPPort = Config.clientRTPPort;
-        
-        // initialize GSstreamer with some debug
-        Gst.init("SIP Voicemail", new String[] { "--gst-debug-level=2",
-                        "--gst-debug-no-color" });
-        
-        init();
-        System.out.println("Voice Mail Client listening on "+this.myPort);
-        
+        this.client = clientt;
+    }
+    
+    public int getPort(){
+        return myPort;
     }
     
     @Override
@@ -181,8 +175,9 @@ public class VoiceMailClient implements SipListener{
                     if (serverRtpPort!= -1){
                         //Start sending to the udpsink
                         System.out.println("Start sendint to server at port: "+serverRtpPort);
-                        caSender = new ClientAudioSender(Config.serverAddress, serverRtpPort);
-                        caSender.play();
+                        client.startSending(Config.serverAddress, serverRtpPort);
+                        //caSender = new ClientAudioSender(Config.serverAddress, serverRtpPort);
+                        //caSender.play();
                     }
                     
                     
@@ -247,18 +242,6 @@ public class VoiceMailClient implements SipListener{
     
     public final void init(){
         
-        //Start receiving from the udpsrc
-        caReceiver = new ClientAudioReceiver();
-        caReceiver.play();
-        
-        
-        
-        
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(VoiceMailClient.class.getName()).log(Level.SEVERE, null, ex);
-        }
         
         SipFactory sipFactory = null;
         sipStack = null;
@@ -301,12 +284,12 @@ public class VoiceMailClient implements SipListener{
                 System.out.println("listeningPoint = " + lp);
                 sipProvider = sipStack.createSipProvider(lp);
                 System.out.println("SipProvider = " + sipProvider);
-                VoiceMailClient listener = this;
+                SipListenerClient listener = this;
                 sipProvider.addSipListener(listener);
 
-                String fromName = "Caller1";
+                String fromName = client.getMyName();
                 String fromSipAddress = "here.com";
-                String fromDisplayName = "The Caller 1";
+                String fromDisplayName = client.getMyName();
 
                 String toSipAddress = "there.com";
                 String toUser = "Callee1";
@@ -359,6 +342,7 @@ public class VoiceMailClient implements SipListener{
                 MaxForwardsHeader maxForwards = headerFactory
                                 .createMaxForwardsHeader(70);
 
+                
                 // Create the request.
                 Request request = messageFactory.createRequest(requestURI,
                                 Request.INVITE, callIdHeader, cSeqHeader, fromHeader,
@@ -408,10 +392,10 @@ public class VoiceMailClient implements SipListener{
                         + // session name
                         "t=0 0\n"
                         + "m=audio "
-                        + caReceiver.getPort()
+                        + client.getCAReceiver().getPort()
                         + " RTP/AVP 96\n"
                         + "a=rtcp:"
-                        + (caReceiver.getPort() + 1)
+                        + (client.getCAReceiver().getPort() + 1)
                         + "\n"
                         + "a=rtpmap:96 speex/16000");
                 byte[] contents = clientSdp.toString().getBytes();
@@ -462,23 +446,15 @@ public class VoiceMailClient implements SipListener{
         System.out.println("Sent bye.");
         
         //stop receiver
-        caReceiver.stop();
+        client.getCAReceiver().stop();
+        
         //stop sender
-        caSender.stop();
-    }
-    
-    public static void main(String [] args){
-        VoiceMailClient client = new VoiceMailClient();
-        System.out.println("client created");
-        
-        System.out.println("send Bye?[Press enter if yes]");
-        new java.util.Scanner(System.in).nextLine();
-        client.sendBye();
-        
-        
+        client.getCASender().stop();
     }
     
     
-    
+    public void sendALeaveMessageRequest(){
+        
+    }
     
 }

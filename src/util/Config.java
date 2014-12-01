@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package voicemail;
+package util;
 
 /**
  *
@@ -11,7 +11,7 @@ package voicemail;
  */
 public class Config {
     
-    public static final String serverAddress = "127.0.0.1";
+    public static String serverAddress = "127.0.0.1";
     public static final int serverPort = 5060;
     
     public static final String myClientAddress = "127.0.0.1";

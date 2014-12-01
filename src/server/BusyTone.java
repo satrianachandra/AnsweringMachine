@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package audiopipeline;
+package server;
 
+import javax.tools.Tool;
 import org.gstreamer.Caps;
 import org.gstreamer.Element;
 import org.gstreamer.ElementFactory;
 import org.gstreamer.Pad;
 import org.gstreamer.PadLinkReturn;
 import org.gstreamer.Pipeline;
-import org.gstreamer.elements.BaseSrc;
 import org.gstreamer.elements.good.RTPBin;
 import util.Util;
 
@@ -19,15 +19,16 @@ import util.Util;
  *
  * @author chandra
  */
-public class ClientAudioSender extends Pipeline{
+public class BusyTone extends Pipeline {
     
-    public ClientAudioSender(String destIP, int destPort){
+    
+    public BusyTone(String ipAddress, int port){
         super();
         
-        BaseSrc audioSrc = (BaseSrc) ElementFactory.make("alsasrc", null);
-        audioSrc.setLive(true);
+        Element fileSrc = ElementFactory.make("filesrc", null);
+        fileSrc.set("location", "/home/chandra/NetBeansProjects/AnsweringMachine/lib/voicemailgreetings.mp3");
         
-        //Element decodebin = ElementFactory.make("decodebin", null);
+        Element decodebin = ElementFactory.make("decodebin", null);
         
         final Element audioconvert = ElementFactory.make("audioconvert", null);
         final Element audioresample = ElementFactory
@@ -51,17 +52,16 @@ public class ClientAudioSender extends Pipeline{
         Pad rtpSink0 = rtpBin.getRequestPad("send_rtp_sink_0");
 
         Element udpSink = ElementFactory.make("udpsink", "udpSinkAudio");
-        udpSink.set("host", destIP);
-        udpSink.set("port", destPort);
-        System.out.println("sending my voice to "+destPort);
+        udpSink.set("host", ipAddress);
+        udpSink.set("port", port);
+        System.out.println("sending busy tone to "+port);
         udpSink.set("async", false);
 
         // ############## ADD THEM TO PIPELINE ####################
-        addMany(audioSrc, audioconvert, audioresample, capsRateFilter,
+        addMany(fileSrc, decodebin, audioconvert, audioresample, capsRateFilter,
                         encoder, rtpPay, capsRtpFilter, rtpBin, udpSink);
 
         // ####################### CONNECT EVENT ######################"
-        /*
         decodebin.connect(new Element.PAD_ADDED() {
                 public void padAdded(Element element, Pad pad) {
                         System.out.println("\nGot new input pad: " + pad);
@@ -70,12 +70,9 @@ public class ClientAudioSender extends Pipeline{
                                                         PadLinkReturn.OK));
                 }
         });
-               */
-        
-        
-        
+
         // ###################### LINK THEM ##########################
-        Util.doOrDie("audioSrc,audioconver", linkMany(audioSrc, audioconvert));
+        Util.doOrDie("src,decodebin", linkMany(fileSrc, decodebin));
 
         Util.doOrDie("audioconvert,audioresample,capsRateFilter,encoder,rtppay,capsFilter",
                         linkMany(audioconvert, audioresample, capsRateFilter, encoder,
@@ -87,9 +84,5 @@ public class ClientAudioSender extends Pipeline{
                                         .link(udpSink.getStaticPad("sink"))
                                         .equals(PadLinkReturn.OK));
         
-        
-        pause();
-        
     }
-    
 }
