@@ -14,6 +14,12 @@ public class Config {
     public static final String serverAddress = "127.0.0.1";
     public static final int serverPort = 5060;
     
-    public static final String MESSAGE_RECORDING_ROOT = "/home/chandra";
+    public static final String myClientAddress = "127.0.0.1";
+    public static final int clientPort = 5050;
+    //public static final int clientRTPPort = 4040;
+    
+    public static final String MESSAGE_RECORDING_ROOT = "/tmp/voicemailmessages/";
+    
+    
     
 }

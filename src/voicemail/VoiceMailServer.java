@@ -9,7 +9,9 @@ import audiopipeline.BusyTone;
 import audiopipeline.MessageRecorder;
 import gov.nist.javax.sip.address.SipUri;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -58,7 +60,6 @@ public class VoiceMailServer implements SipListener{
     private AddressFactory addressFactory;
     private MessageFactory messageFactory;
     private HeaderFactory headerFactory;
-    //private SdpTool sdpTool;
     private SipStack sipStack;
 
     /** My IP address (to put in SDP offers) */
@@ -68,13 +69,16 @@ public class VoiceMailServer implements SipListener{
     /** Main application API */
     //private App app;
 
+    private List<MessageRecorder>listOfMessageRecorders;
     
     public VoiceMailServer(){
         this.myAddress = Config.serverAddress;
         this.myPort = Config.serverPort;
         
+        listOfMessageRecorders = new ArrayList<>();
+        
         // initialize GSstreamer with some debug
-        Gst.init("SIP Voicemail", new String[] { "--gst-debug-level=3",
+        Gst.init("SIP Voicemail", new String[] { "--gst-debug-level=2",
                         "--gst-debug-no-color" });
         
         init();
@@ -170,8 +174,13 @@ public class VoiceMailServer implements SipListener{
         Request request = requestEvent.getRequest();
         try {
                 // 200 OK
+                System.out.println("Got a bye");
                 Response response = messageFactory.createResponse(200, request);
                 serverTransactionId.sendResponse(response);
+                
+                //stop the receiver, it should actually first search from who:
+                listOfMessageRecorders.get(0).stop();
+                
         } catch (Exception ex) {
                 ex.printStackTrace();
                 System.exit(0);
@@ -215,32 +224,33 @@ public class VoiceMailServer implements SipListener{
                 if (st.getState() != TransactionState.COMPLETED) {
                     // get info from client's SDP offer
                     SessionDescription clientSdp = null;
-                    clientSdp = SdpTool.fromString(new String(request.getRawContent() ));
-                    
+                    clientSdp = SdpTool.fromString(new String(request.getRawContent()));
+
                     String clientAddr = SdpTool.getIpAddress(clientSdp);
                     System.out.println("Client SDP medias "
-                                        + clientSdp.getMediaDescriptions(false).toString());
+                            + clientSdp.getMediaDescriptions(false).toString());
                     int myRtpListenPort = -1;
                     int clientRtpPort = SdpTool.getAudioMediaPort(clientSdp);
                     if (clientRtpPort != -1) {
-                            System.out.println("Client wants sound @ " + clientAddr
-                                            + ":" + clientRtpPort);
+                        System.out.println("Client wants sound at " + clientAddr
+                                + ":" + clientRtpPort);
 
-                            // get caller and callee names from request
-                            String callee = ((SipUri) ((ToHeader) request
-                                            .getHeader("to")).getAddress().getURI())
-                                            .getAuthority().getUser();
-                            String caller = ((SipUri) ((FromHeader) request
-                                            .getHeader("from")).getAddress().getURI())
-                                            .getAuthority().getUser();
-                            myRtpListenPort = answerCall(clientAddr, clientRtpPort,
-                                            callee, caller);
+                        // get caller and callee names from request
+                        String callee = ((SipUri) ((ToHeader) request
+                                .getHeader("to")).getAddress().getURI())
+                                .getAuthority().getUser();
+                        String caller = ((SipUri) ((FromHeader) request
+                                .getHeader("from")).getAddress().getURI())
+                                .getAuthority().getUser();
+                        System.out.println("callee " + callee + ", caller " + caller);
+                        myRtpListenPort = answerCall(clientAddr, clientRtpPort,
+                                callee, caller);
                     } else {
-                            System.err
-                                            .println("Client didn't give any port for audio stream");
-                            // TODO cancel everything with proper message
+                        System.err
+                                .println("Client didn't give any port for audio stream");
+                        // TODO cancel everything with proper message
                     }
-                    
+
                     // create my SDP offer
                     SessionDescription serverSdp = SdpTool.fromString("v=0\n"// protocol
                             // version
@@ -266,7 +276,7 @@ public class VoiceMailServer implements SipListener{
                             + "\n"
                             + "a=rtpmap:96 speex/16000");
                     // + "a=fmtp:96 mode=\"10,any\"");
-
+                    System.out.println("MyRTPPort: "+myRtpListenPort);
                     // prepare response message
                     Response response = messageFactory.createResponse(
                             Response.OK, request);
@@ -284,20 +294,16 @@ public class VoiceMailServer implements SipListener{
                                     "application", "sdp"));
 
                     st.sendResponse(response);
-                    
+
                 }
                 
             } catch (TransactionAlreadyExistsException ex) {
                 Logger.getLogger(VoiceMailServer.class.getName()).log(Level.SEVERE, null, ex);
             } catch (TransactionUnavailableException ex) {
                 Logger.getLogger(VoiceMailServer.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (SdpException ex) {
-                Logger.getLogger(VoiceMailServer.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (ParseException ex) {
+            } catch (SdpException | ParseException | InvalidArgumentException ex) {
                 Logger.getLogger(VoiceMailServer.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SipException ex) {
-                Logger.getLogger(VoiceMailServer.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (InvalidArgumentException ex) {
                 Logger.getLogger(VoiceMailServer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
@@ -355,10 +361,11 @@ public class VoiceMailServer implements SipListener{
     
     private int answerCall(String clientAddr, int clientRtpPort, String calleeName, String callerName) {
         // prepare and start receiving message
-        final MessageRecorder receiver = new MessageRecorder(callerName, calleeName);
-
+        final MessageRecorder messageRecorder = new MessageRecorder(callerName, calleeName);
+        listOfMessageRecorders.add(messageRecorder);
+        
         // send the busy tone
-        final BusyTone busyTone = new BusyTone(myAddress, myPort);
+        final BusyTone busyTone = new BusyTone(clientAddr, clientRtpPort);
         busyTone.getBus().connect(new Bus.EOS() {
                 public void endOfStream(GstObject source) {
                         /*
@@ -366,13 +373,13 @@ public class VoiceMailServer implements SipListener{
                          * recording of message
                          */
                         busyTone.stop();
-                        receiver.play();
+                        messageRecorder.play();
                 }
         });
         // play it
         busyTone.play();
 
-        return receiver.getPort();
+        return messageRecorder.getPort();
     }
     
     

@@ -1,0 +1,484 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package voicemail;
+
+import audiopipeline.ClientAudioReceiver;
+import audiopipeline.ClientAudioSender;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.sdp.SessionDescription;
+import javax.sip.ClientTransaction;
+import javax.sip.Dialog;
+import javax.sip.DialogState;
+import javax.sip.DialogTerminatedEvent;
+import javax.sip.IOExceptionEvent;
+import javax.sip.InvalidArgumentException;
+import javax.sip.ListeningPoint;
+import javax.sip.PeerUnavailableException;
+import javax.sip.RequestEvent;
+import javax.sip.ResponseEvent;
+import javax.sip.ServerTransaction;
+import javax.sip.SipException;
+import javax.sip.SipFactory;
+import javax.sip.SipListener;
+import javax.sip.SipProvider;
+import javax.sip.SipStack;
+import javax.sip.TimeoutEvent;
+import javax.sip.TransactionTerminatedEvent;
+import javax.sip.address.Address;
+import javax.sip.address.AddressFactory;
+import javax.sip.address.SipURI;
+import javax.sip.header.CSeqHeader;
+import javax.sip.header.CallIdHeader;
+import javax.sip.header.ContactHeader;
+import javax.sip.header.ContentTypeHeader;
+import javax.sip.header.FromHeader;
+import javax.sip.header.Header;
+import javax.sip.header.HeaderFactory;
+import javax.sip.header.MaxForwardsHeader;
+import javax.sip.header.ToHeader;
+import javax.sip.header.ViaHeader;
+import javax.sip.message.MessageFactory;
+import javax.sip.message.Request;
+import javax.sip.message.Response;
+import org.gstreamer.Gst;
+import util.SdpTool;
+
+/**
+ *
+ * @author chandra
+ */
+public class VoiceMailClient implements SipListener{
+    
+    private AddressFactory addressFactory;
+    private MessageFactory messageFactory;
+    private HeaderFactory headerFactory;
+    private SipStack sipStack;
+    private ListeningPoint lp;
+    private SipProvider sipProvider;
+    private ContactHeader contactHeader;
+    private ClientTransaction inviteTid;
+    private Dialog dialog;
+    
+    /** My IP address (to put in SDP offers) */
+    private String myAddress;
+    /** SIP listening port */
+    private int myPort;
+    /** Main application API */
+    //private App app;
+    
+   // private int myRTPPort;
+    private ClientAudioReceiver caReceiver;
+    private ClientAudioSender caSender;
+    
+
+    public VoiceMailClient(){
+        this.myAddress = Config.myClientAddress;
+        this.myPort = Config.clientPort;
+      //  this.myRTPPort = Config.clientRTPPort;
+        
+        // initialize GSstreamer with some debug
+        Gst.init("SIP Voicemail", new String[] { "--gst-debug-level=2",
+                        "--gst-debug-no-color" });
+        
+        init();
+        System.out.println("Voice Mail Client listening on "+this.myPort);
+        
+    }
+    
+    @Override
+    public void processRequest(RequestEvent requestEvent) {
+        Request request = requestEvent.getRequest();
+        ServerTransaction serverTransaction = requestEvent
+                        .getServerTransaction();
+
+        if (serverTransaction == null) {
+                System.out.println("Request " + request.getMethod()
+                                + " with no server transaction yet");
+        } else {
+                System.out.println("Request " + request.getMethod()
+                                + " with server transaction id "
+                                + serverTransaction.getBranchId() + " and dialog id "
+                                + serverTransaction.getDialog().getDialogId());
+        }
+        
+        // We are the UAC so the only request we get is the BYE.
+        if (request.getMethod().equals(Request.BYE))
+                processBye(requestEvent, serverTransaction);
+        else {
+            try {
+                    serverTransaction.sendResponse(messageFactory.createResponse(
+                                    202, request));
+            } catch (SipException | InvalidArgumentException | ParseException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+            }
+        }
+        
+        
+    }
+
+    // Save the created ACK request, to respond to retransmitted 2xx
+    private Request ackRequest;
+
+    
+    @Override
+    public void processResponse(ResponseEvent responseReceivedEvent) {
+        System.out.println("Got a response");
+        Response response = (Response) responseReceivedEvent.getResponse();
+        ClientTransaction tid = responseReceivedEvent.getClientTransaction();
+        CSeqHeader cseq = (CSeqHeader) response.getHeader(CSeqHeader.NAME);
+        
+        System.out.println("Response received : Status Code = "
+				+ response.getStatusCode() + " " + cseq);
+        if (tid == null) {
+            // RFC3261: MUST respond to every 2xx
+            if (ackRequest != null && dialog != null) {
+                System.out.println("re-sending ACK");
+                try {
+                    dialog.sendAck(ackRequest);
+                } catch (SipException se) {
+                    se.printStackTrace();
+                }
+            }
+            return;
+        }
+        
+        
+        System.out.println("transaction state is " + tid.getState());
+        System.out.println("Dialog = " + tid.getDialog());
+        System.out.println("Dialog State is " + tid.getDialog().getState());
+        
+        try {
+            if (response.getStatusCode() == Response.OK) {
+                if (cseq.getMethod().equals(Request.INVITE)) {
+                    System.out.println("Dialog after 200 OK  " + dialog);
+                    System.out.println("Dialog State after 200 OK  "
+                            + dialog.getState());
+                    ackRequest = dialog.createAck(((CSeqHeader) response
+                            .getHeader(CSeqHeader.NAME)).getSeqNumber());
+                    System.out.println("Sending ACK");
+                    dialog.sendAck(ackRequest);
+                    
+                    
+                    
+                    SessionDescription serverSdp = null;
+                    serverSdp = SdpTool.fromString(new String(response.getRawContent()));
+
+                    String clientAddr = SdpTool.getIpAddress(serverSdp);
+                    System.out.println("Server's SDP medias "
+                            + serverSdp.getMediaDescriptions(false).toString());
+                    
+                    int serverRtpPort = SdpTool.getAudioMediaPort(serverSdp);
+                    
+                    if (serverRtpPort!= -1){
+                        //Start sending to the udpsink
+                        System.out.println("Start sendint to server at port: "+serverRtpPort);
+                        caSender = new ClientAudioSender(Config.serverAddress, serverRtpPort);
+                        caSender.play();
+                    }
+                    
+                    
+                    
+                } else if (cseq.getMethod().equals(Request.CANCEL)) {
+                    if (dialog.getState() == DialogState.CONFIRMED) {
+                                    // oops cancel went in too late. Need to hang up the
+                        // dialog.
+                        System.out
+                                .println("Sending BYE -- cancel went in too late !!");
+                        Request byeRequest = dialog.createRequest(Request.BYE);
+                        ClientTransaction ct = sipProvider
+                                .getNewClientTransaction(byeRequest);
+                        dialog.sendRequest(ct);
+
+                    }
+
+                }
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            System.exit(0);
+        }
+        
+
+    }
+
+    @Override
+    public void processTimeout(TimeoutEvent te) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void processIOException(IOExceptionEvent ioee) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void processTransactionTerminated(TransactionTerminatedEvent tte) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void processDialogTerminated(DialogTerminatedEvent dte) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    private void processBye(RequestEvent requestEvent,
+			ServerTransaction serverTransactionId) {
+        Request request = requestEvent.getRequest();
+        try {
+                // 200 OK
+                System.out.println("Got a bye");
+                Response response = messageFactory.createResponse(200, request);
+                serverTransactionId.sendResponse(response);
+        } catch (Exception ex) {
+                ex.printStackTrace();
+                System.exit(0);
+        }
+    }
+    
+    
+    public final void init(){
+        
+        //Start receiving from the udpsrc
+        caReceiver = new ClientAudioReceiver();
+        caReceiver.play();
+        
+        
+        
+        
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(VoiceMailClient.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        SipFactory sipFactory = null;
+        sipStack = null;
+        sipFactory = SipFactory.getInstance();
+        sipFactory.setPathName("gov.nist");
+        
+        Properties properties = new Properties();
+        String transport = "udp";
+        String peerHostPort = Config.serverAddress+":"+Config.serverPort;
+        properties.setProperty("javax.sip.OUTBOUND_PROXY", peerHostPort + "/"
+                        + transport);
+        properties.setProperty("javax.sip.STACK_NAME", "voicemailclient");
+        properties.setProperty("gov.nist.javax.sip.DEBUG_LOG",
+                        "voicemailclientdebug.txt");
+        properties.setProperty("gov.nist.javax.sip.SERVER_LOG",
+                        "voicemailclientlog.txt");
+        properties.setProperty("gov.nist.javax.sip.CACHE_CLIENT_CONNECTIONS",
+                        "false");
+        properties.setProperty("gov.nist.javax.sip.TRACE_LEVEL", "DEBUG");
+
+        try {
+                // Create SipStack object
+                sipStack = sipFactory.createSipStack(properties);
+                System.out.println("createSipStack " + sipStack);
+        } catch (PeerUnavailableException e) {
+                // could not find
+                // gov.nist.jain.protocol.ip.sip.SipStackImpl
+                // in the classpath
+                e.printStackTrace();
+                System.err.println(e.getMessage());
+                System.exit(0);
+        }
+        
+        try {
+                headerFactory = sipFactory.createHeaderFactory();
+                addressFactory = sipFactory.createAddressFactory();
+                messageFactory = sipFactory.createMessageFactory();
+                lp = sipStack.createListeningPoint(myAddress,
+                                myPort, "udp");
+                System.out.println("listeningPoint = " + lp);
+                sipProvider = sipStack.createSipProvider(lp);
+                System.out.println("SipProvider = " + sipProvider);
+                VoiceMailClient listener = this;
+                sipProvider.addSipListener(listener);
+
+                String fromName = "Caller1";
+                String fromSipAddress = "here.com";
+                String fromDisplayName = "The Caller 1";
+
+                String toSipAddress = "there.com";
+                String toUser = "Callee1";
+                String toDisplayName = "The Callee 1";
+
+                // create >From Header
+                SipURI fromAddress = addressFactory.createSipURI(fromName,
+                                fromSipAddress);
+
+                Address fromNameAddress = addressFactory.createAddress(fromAddress);
+                fromNameAddress.setDisplayName(fromDisplayName);
+                FromHeader fromHeader = headerFactory.createFromHeader(
+                                fromNameAddress, "12345");
+
+                // create To Header
+                SipURI toAddress = addressFactory
+                                .createSipURI(toUser, toSipAddress);
+                Address toNameAddress = addressFactory.createAddress(toAddress);
+                toNameAddress.setDisplayName(toDisplayName);
+                ToHeader toHeader = headerFactory.createToHeader(toNameAddress,
+                                null);
+
+                // create Request URI
+                SipURI requestURI = addressFactory.createSipURI(toUser,
+                                peerHostPort);
+
+                // Create ViaHeaders
+
+                ArrayList<ViaHeader> viaHeaders = new ArrayList<>();
+                String ipAddress = lp.getIPAddress();
+                ViaHeader viaHeader = headerFactory.createViaHeader(ipAddress,
+                                sipProvider.getListeningPoint(transport).getPort(),
+                                transport, null);
+
+                // add via headers
+                viaHeaders.add(viaHeader);
+
+                // Create ContentTypeHeader
+                ContentTypeHeader contentTypeHeader = headerFactory
+                                .createContentTypeHeader("application", "sdp");
+
+                // Create a new CallId header
+                CallIdHeader callIdHeader = sipProvider.getNewCallId();
+
+                // Create a new Cseq header
+                CSeqHeader cSeqHeader = headerFactory.createCSeqHeader(1L,
+                                Request.INVITE);
+
+                // Create a new MaxForwardsHeader
+                MaxForwardsHeader maxForwards = headerFactory
+                                .createMaxForwardsHeader(70);
+
+                // Create the request.
+                Request request = messageFactory.createRequest(requestURI,
+                                Request.INVITE, callIdHeader, cSeqHeader, fromHeader,
+                                toHeader, viaHeaders, maxForwards);
+                // Create contact headers
+                String host = Config.myClientAddress;
+
+                SipURI contactUrl = addressFactory.createSipURI(fromName, host);
+                contactUrl.setPort(lp.getPort());
+                contactUrl.setLrParam();
+
+                // Create the contact name address.
+                SipURI contactURI = addressFactory.createSipURI(fromName, host);
+                contactURI.setPort(sipProvider.getListeningPoint(transport)
+                                .getPort());
+
+                Address contactAddress = addressFactory.createAddress(contactURI);
+
+                // Add the contact address.
+                contactAddress.setDisplayName(fromName);
+
+                contactHeader = headerFactory.createContactHeader(contactAddress);
+                request.addHeader(contactHeader);
+
+                // You can add extension headers of your own making
+                // to the outgoing SIP request.
+                // Add the extension header.
+                //Header extensionHeader = headerFactory.createHeader("My-Header",
+                //                "my header value");
+                //request.addHeader(extensionHeader);
+                    
+                // create my SDP offer
+                SessionDescription clientSdp = SdpTool.fromString("v=0\n"// protocol
+                        // version
+                        + "o=Voicemail "
+                        + new Date().getTime()
+                        + " "
+                        + new Date().getTime()
+                        + " IN IP4 "
+                        + myAddress
+                        + "\n"
+                        + "c= IN IP4 "
+                        + myAddress
+                        + "\n"
+                        + // originator
+                        "s=Voicemail\n"
+                        + // session name
+                        "t=0 0\n"
+                        + "m=audio "
+                        + caReceiver.getPort()
+                        + " RTP/AVP 96\n"
+                        + "a=rtcp:"
+                        + (caReceiver.getPort() + 1)
+                        + "\n"
+                        + "a=rtpmap:96 speex/16000");
+                byte[] contents = clientSdp.toString().getBytes();
+
+                request.setContent(contents, contentTypeHeader);
+                // You can add as many extension headers as you
+                // want.
+
+               // extensionHeader = headerFactory.createHeader("My-Other-Header",
+               //                 "my new header value ");
+               // request.addHeader(extensionHeader);
+
+               // Header callInfoHeader = headerFactory.createHeader("Call-Info",
+               //                 "<http://www.antd.nist.gov>");
+              //  request.addHeader(callInfoHeader);
+
+                // Create the client transaction.
+                inviteTid = sipProvider.getNewClientTransaction(request);
+
+                System.out.println("inviteTid = " + inviteTid);
+
+                // send the request out.
+
+                inviteTid.sendRequest();
+                System.out.println("call request sent to server");
+                
+                dialog = inviteTid.getDialog();
+
+        } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+                ex.printStackTrace();
+                //usage();
+        }
+
+        
+    }
+    
+    public void sendBye(){
+        try {
+            Request byeRequest = dialog.createRequest(Request.BYE);
+            ClientTransaction ct = sipProvider
+                            .getNewClientTransaction(byeRequest);
+            dialog.sendRequest(ct);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            System.exit(0);
+        }
+        System.out.println("Sent bye.");
+        
+        //stop receiver
+        caReceiver.stop();
+        //stop sender
+        caSender.stop();
+    }
+    
+    public static void main(String [] args){
+        VoiceMailClient client = new VoiceMailClient();
+        System.out.println("client created");
+        
+        System.out.println("send Bye?[Press enter if yes]");
+        new java.util.Scanner(System.in).nextLine();
+        client.sendBye();
+        
+        
+    }
+    
+    
+    
+    
+}
