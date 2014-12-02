@@ -3173,3 +3173,4890 @@ Content-Length: 0
 ]]>
 </message>
 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515458994"
+isSender="false" 
+transactionId="z9hg4bk-313336-febcdad86c8fe1e6f7407546c722841d" 
+callId="d657c37598ab8bef4e3d6b42d744315e@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d657c37598ab8bef4e3d6b42d744315e@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313336-febcdad86c8fe1e6f7407546c722841d
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515459369"
+isSender="true" 
+transactionId="z9hg4bk-313336-febcdad86c8fe1e6f7407546c722841d" 
+callId="d657c37598ab8bef4e3d6b42d744315e@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: d657c37598ab8bef4e3d6b42d744315e@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313336-febcdad86c8fe1e6f7407546c722841d
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515459489"
+isSender="false" 
+transactionId="z9hg4bk-313336-febcdad86c8fe1e6f7407546c722841d" 
+callId="d657c37598ab8bef4e3d6b42d744315e@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d657c37598ab8bef4e3d6b42d744315e@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313336-febcdad86c8fe1e6f7407546c722841d
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515459492"
+isSender="true" 
+transactionId="z9hg4bk-313336-febcdad86c8fe1e6f7407546c722841d" 
+callId="d657c37598ab8bef4e3d6b42d744315e@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: d657c37598ab8bef4e3d6b42d744315e@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313336-febcdad86c8fe1e6f7407546c722841d
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515629082"
+isSender="false" 
+transactionId="z9hg4bk-353230-33b740c99fd40c9eadf2fd5cd3089d21" 
+callId="2ff3907ad9daf254f0001099f357af1a@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 2ff3907ad9daf254f0001099f357af1a@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353230-33b740c99fd40c9eadf2fd5cd3089d21
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515629470"
+isSender="true" 
+transactionId="z9hg4bk-353230-33b740c99fd40c9eadf2fd5cd3089d21" 
+callId="2ff3907ad9daf254f0001099f357af1a@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 2ff3907ad9daf254f0001099f357af1a@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353230-33b740c99fd40c9eadf2fd5cd3089d21
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515629597"
+isSender="false" 
+transactionId="z9hg4bk-353230-33b740c99fd40c9eadf2fd5cd3089d21" 
+callId="2ff3907ad9daf254f0001099f357af1a@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 2ff3907ad9daf254f0001099f357af1a@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353230-33b740c99fd40c9eadf2fd5cd3089d21
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515629600"
+isSender="true" 
+transactionId="z9hg4bk-353230-33b740c99fd40c9eadf2fd5cd3089d21" 
+callId="2ff3907ad9daf254f0001099f357af1a@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 2ff3907ad9daf254f0001099f357af1a@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353230-33b740c99fd40c9eadf2fd5cd3089d21
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515715812"
+isSender="false" 
+transactionId="z9hg4bk-373037-53246029120338cf3189ceac1f72d0d5" 
+callId="1673a38c1b21114ec56b50edd6c0eb2c@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 1673a38c1b21114ec56b50edd6c0eb2c@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373037-53246029120338cf3189ceac1f72d0d5
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515716214"
+isSender="true" 
+transactionId="z9hg4bk-373037-53246029120338cf3189ceac1f72d0d5" 
+callId="1673a38c1b21114ec56b50edd6c0eb2c@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 1673a38c1b21114ec56b50edd6c0eb2c@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373037-53246029120338cf3189ceac1f72d0d5
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515772809"
+isSender="false" 
+transactionId="z9hg4bk-333438-bbdac43a04489098e0cf333869647739" 
+callId="95f330d1f8ee3a6ff1d364e065954046@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 95f330d1f8ee3a6ff1d364e065954046@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333438-bbdac43a04489098e0cf333869647739
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515773246"
+isSender="true" 
+transactionId="z9hg4bk-333438-bbdac43a04489098e0cf333869647739" 
+callId="95f330d1f8ee3a6ff1d364e065954046@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 95f330d1f8ee3a6ff1d364e065954046@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333438-bbdac43a04489098e0cf333869647739
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515773317"
+isSender="false" 
+transactionId="z9hg4bk-333438-bbdac43a04489098e0cf333869647739" 
+callId="95f330d1f8ee3a6ff1d364e065954046@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 95f330d1f8ee3a6ff1d364e065954046@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333438-bbdac43a04489098e0cf333869647739
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515773331"
+isSender="true" 
+transactionId="z9hg4bk-333438-bbdac43a04489098e0cf333869647739" 
+callId="95f330d1f8ee3a6ff1d364e065954046@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 95f330d1f8ee3a6ff1d364e065954046@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333438-bbdac43a04489098e0cf333869647739
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417525453554"
+isSender="false" 
+transactionId="z9hg4bk-343338-0ef123ba7b780bce0382a2914de1fe4a" 
+callId="75cc41ba120e340b538a9eb27f921227@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 75cc41ba120e340b538a9eb27f921227@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343338-0ef123ba7b780bce0382a2914de1fe4a
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417525453973"
+isSender="true" 
+transactionId="z9hg4bk-343338-0ef123ba7b780bce0382a2914de1fe4a" 
+callId="75cc41ba120e340b538a9eb27f921227@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 75cc41ba120e340b538a9eb27f921227@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343338-0ef123ba7b780bce0382a2914de1fe4a
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417525454064"
+isSender="false" 
+transactionId="z9hg4bk-343338-0ef123ba7b780bce0382a2914de1fe4a" 
+callId="75cc41ba120e340b538a9eb27f921227@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 75cc41ba120e340b538a9eb27f921227@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343338-0ef123ba7b780bce0382a2914de1fe4a
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417525454066"
+isSender="true" 
+transactionId="z9hg4bk-343338-0ef123ba7b780bce0382a2914de1fe4a" 
+callId="75cc41ba120e340b538a9eb27f921227@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 75cc41ba120e340b538a9eb27f921227@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343338-0ef123ba7b780bce0382a2914de1fe4a
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417525658477"
+isSender="false" 
+transactionId="z9hg4bk-373939-09c5e0b363cbc09bc37b2ada838452a2" 
+callId="66359d351926ac4114dfcf139149e120@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 66359d351926ac4114dfcf139149e120@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373939-09c5e0b363cbc09bc37b2ada838452a2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417525658904"
+isSender="true" 
+transactionId="z9hg4bk-373939-09c5e0b363cbc09bc37b2ada838452a2" 
+callId="66359d351926ac4114dfcf139149e120@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 66359d351926ac4114dfcf139149e120@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373939-09c5e0b363cbc09bc37b2ada838452a2
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417525658989"
+isSender="false" 
+transactionId="z9hg4bk-373939-09c5e0b363cbc09bc37b2ada838452a2" 
+callId="66359d351926ac4114dfcf139149e120@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 66359d351926ac4114dfcf139149e120@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373939-09c5e0b363cbc09bc37b2ada838452a2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417525658992"
+isSender="true" 
+transactionId="z9hg4bk-373939-09c5e0b363cbc09bc37b2ada838452a2" 
+callId="66359d351926ac4114dfcf139149e120@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 66359d351926ac4114dfcf139149e120@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373939-09c5e0b363cbc09bc37b2ada838452a2
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526370176"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526370677"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526371662"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526373665"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526377669"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526381676"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526385678"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526389679"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526633220"
+isSender="false" 
+transactionId="z9hg4bk-313234-00331d59ece29aade742be51118cf75b" 
+callId="837fa47e2ee36f2901c3fce71e57a085@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 837fa47e2ee36f2901c3fce71e57a085@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313234-00331d59ece29aade742be51118cf75b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526633727"
+isSender="false" 
+transactionId="z9hg4bk-313234-00331d59ece29aade742be51118cf75b" 
+callId="837fa47e2ee36f2901c3fce71e57a085@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 837fa47e2ee36f2901c3fce71e57a085@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313234-00331d59ece29aade742be51118cf75b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526634721"
+isSender="false" 
+transactionId="z9hg4bk-313234-00331d59ece29aade742be51118cf75b" 
+callId="837fa47e2ee36f2901c3fce71e57a085@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 837fa47e2ee36f2901c3fce71e57a085@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313234-00331d59ece29aade742be51118cf75b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526636721"
+isSender="false" 
+transactionId="z9hg4bk-313234-00331d59ece29aade742be51118cf75b" 
+callId="837fa47e2ee36f2901c3fce71e57a085@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 837fa47e2ee36f2901c3fce71e57a085@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313234-00331d59ece29aade742be51118cf75b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526640727"
+isSender="false" 
+transactionId="z9hg4bk-313234-00331d59ece29aade742be51118cf75b" 
+callId="837fa47e2ee36f2901c3fce71e57a085@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 837fa47e2ee36f2901c3fce71e57a085@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313234-00331d59ece29aade742be51118cf75b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526718242"
+isSender="false" 
+transactionId="z9hg4bk-3837-e1b28a98649909ad7a1f0f9fbe0620ee" 
+callId="99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3837-e1b28a98649909ad7a1f0f9fbe0620ee
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526718759"
+isSender="false" 
+transactionId="z9hg4bk-3837-e1b28a98649909ad7a1f0f9fbe0620ee" 
+callId="99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3837-e1b28a98649909ad7a1f0f9fbe0620ee
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526719748"
+isSender="false" 
+transactionId="z9hg4bk-3837-e1b28a98649909ad7a1f0f9fbe0620ee" 
+callId="99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3837-e1b28a98649909ad7a1f0f9fbe0620ee
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526721761"
+isSender="false" 
+transactionId="z9hg4bk-3837-e1b28a98649909ad7a1f0f9fbe0620ee" 
+callId="99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3837-e1b28a98649909ad7a1f0f9fbe0620ee
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526803979"
+isSender="false" 
+transactionId="z9hg4bk-373130-3f6267b38aa6b7d0037c2cb6376ca542" 
+callId="9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373130-3f6267b38aa6b7d0037c2cb6376ca542
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526804487"
+isSender="false" 
+transactionId="z9hg4bk-373130-3f6267b38aa6b7d0037c2cb6376ca542" 
+callId="9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373130-3f6267b38aa6b7d0037c2cb6376ca542
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526805485"
+isSender="false" 
+transactionId="z9hg4bk-373130-3f6267b38aa6b7d0037c2cb6376ca542" 
+callId="9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373130-3f6267b38aa6b7d0037c2cb6376ca542
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526807487"
+isSender="false" 
+transactionId="z9hg4bk-373130-3f6267b38aa6b7d0037c2cb6376ca542" 
+callId="9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373130-3f6267b38aa6b7d0037c2cb6376ca542
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526811490"
+isSender="false" 
+transactionId="z9hg4bk-373130-3f6267b38aa6b7d0037c2cb6376ca542" 
+callId="9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373130-3f6267b38aa6b7d0037c2cb6376ca542
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526943464"
+isSender="false" 
+transactionId="z9hg4bk-333034-14879a2f2da4e3f78a78a0ddd2d2eceb" 
+callId="d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333034-14879a2f2da4e3f78a78a0ddd2d2eceb
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526943990"
+isSender="false" 
+transactionId="z9hg4bk-333034-14879a2f2da4e3f78a78a0ddd2d2eceb" 
+callId="d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333034-14879a2f2da4e3f78a78a0ddd2d2eceb
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526944982"
+isSender="false" 
+transactionId="z9hg4bk-333034-14879a2f2da4e3f78a78a0ddd2d2eceb" 
+callId="d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333034-14879a2f2da4e3f78a78a0ddd2d2eceb
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526946984"
+isSender="false" 
+transactionId="z9hg4bk-333034-14879a2f2da4e3f78a78a0ddd2d2eceb" 
+callId="d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333034-14879a2f2da4e3f78a78a0ddd2d2eceb
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527709175"
+isSender="false" 
+transactionId="z9hg4bk-333336-e0100d5026ddbf49302af049d398579a" 
+callId="7ca68469249ebbd9dd6915dcb6093742@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 7ca68469249ebbd9dd6915dcb6093742@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333336-e0100d5026ddbf49302af049d398579a
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527709673"
+isSender="false" 
+transactionId="z9hg4bk-333336-e0100d5026ddbf49302af049d398579a" 
+callId="7ca68469249ebbd9dd6915dcb6093742@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 7ca68469249ebbd9dd6915dcb6093742@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333336-e0100d5026ddbf49302af049d398579a
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527710663"
+isSender="false" 
+transactionId="z9hg4bk-333336-e0100d5026ddbf49302af049d398579a" 
+callId="7ca68469249ebbd9dd6915dcb6093742@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 7ca68469249ebbd9dd6915dcb6093742@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333336-e0100d5026ddbf49302af049d398579a
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527712662"
+isSender="false" 
+transactionId="z9hg4bk-333336-e0100d5026ddbf49302af049d398579a" 
+callId="7ca68469249ebbd9dd6915dcb6093742@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 7ca68469249ebbd9dd6915dcb6093742@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333336-e0100d5026ddbf49302af049d398579a
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527716670"
+isSender="false" 
+transactionId="z9hg4bk-333336-e0100d5026ddbf49302af049d398579a" 
+callId="7ca68469249ebbd9dd6915dcb6093742@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 7ca68469249ebbd9dd6915dcb6093742@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333336-e0100d5026ddbf49302af049d398579a
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527826758"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527827270"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527828264"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527830266"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527834272"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527838286"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527892681"
+isSender="false" 
+transactionId="z9hg4bk-373736-fb78a81102664dc7ba5a5335fb4e6dcc" 
+callId="250dac6830364e49b823fc11e7920a9c@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 250dac6830364e49b823fc11e7920a9c@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373736-fb78a81102664dc7ba5a5335fb4e6dcc
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527893172"
+isSender="false" 
+transactionId="z9hg4bk-373736-fb78a81102664dc7ba5a5335fb4e6dcc" 
+callId="250dac6830364e49b823fc11e7920a9c@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 250dac6830364e49b823fc11e7920a9c@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373736-fb78a81102664dc7ba5a5335fb4e6dcc
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527894169"
+isSender="false" 
+transactionId="z9hg4bk-373736-fb78a81102664dc7ba5a5335fb4e6dcc" 
+callId="250dac6830364e49b823fc11e7920a9c@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 250dac6830364e49b823fc11e7920a9c@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373736-fb78a81102664dc7ba5a5335fb4e6dcc
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527896175"
+isSender="false" 
+transactionId="z9hg4bk-373736-fb78a81102664dc7ba5a5335fb4e6dcc" 
+callId="250dac6830364e49b823fc11e7920a9c@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 250dac6830364e49b823fc11e7920a9c@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373736-fb78a81102664dc7ba5a5335fb4e6dcc
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527935643"
+isSender="false" 
+transactionId="z9hg4bk-333336-9dc40f98f18e0f646d8c2450b03ff72c" 
+callId="a6bc004f556f5287a9edcea05e85071a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: a6bc004f556f5287a9edcea05e85071a@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333336-9dc40f98f18e0f646d8c2450b03ff72c
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527936156"
+isSender="false" 
+transactionId="z9hg4bk-333336-9dc40f98f18e0f646d8c2450b03ff72c" 
+callId="a6bc004f556f5287a9edcea05e85071a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: a6bc004f556f5287a9edcea05e85071a@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333336-9dc40f98f18e0f646d8c2450b03ff72c
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527937148"
+isSender="false" 
+transactionId="z9hg4bk-333336-9dc40f98f18e0f646d8c2450b03ff72c" 
+callId="a6bc004f556f5287a9edcea05e85071a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: a6bc004f556f5287a9edcea05e85071a@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333336-9dc40f98f18e0f646d8c2450b03ff72c
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527973556"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527974070"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527975065"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527977067"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527981077"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527985086"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527989093"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527993100"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527997112"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528001116"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528005128"
+isSender="false" 
+transactionId="z9hg4bk-383735-a21d7efabf8903e58db5505c8bc5f805" 
+callId="84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 84548229121b4b5eb906bf0f7fdf32c1@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383735-a21d7efabf8903e58db5505c8bc5f805
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528049307"
+isSender="false" 
+transactionId="z9hg4bk-353734-abec0aad6ed98ab4a37ae614bcb563b1" 
+callId="73f896c0fdb659be8b3300b79f41ff52@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 73f896c0fdb659be8b3300b79f41ff52@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353734-abec0aad6ed98ab4a37ae614bcb563b1
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528049818"
+isSender="false" 
+transactionId="z9hg4bk-353734-abec0aad6ed98ab4a37ae614bcb563b1" 
+callId="73f896c0fdb659be8b3300b79f41ff52@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 73f896c0fdb659be8b3300b79f41ff52@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353734-abec0aad6ed98ab4a37ae614bcb563b1
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528050802"
+isSender="false" 
+transactionId="z9hg4bk-353734-abec0aad6ed98ab4a37ae614bcb563b1" 
+callId="73f896c0fdb659be8b3300b79f41ff52@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 73f896c0fdb659be8b3300b79f41ff52@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353734-abec0aad6ed98ab4a37ae614bcb563b1
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528052806"
+isSender="false" 
+transactionId="z9hg4bk-353734-abec0aad6ed98ab4a37ae614bcb563b1" 
+callId="73f896c0fdb659be8b3300b79f41ff52@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 73f896c0fdb659be8b3300b79f41ff52@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353734-abec0aad6ed98ab4a37ae614bcb563b1
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528056809"
+isSender="false" 
+transactionId="z9hg4bk-353734-abec0aad6ed98ab4a37ae614bcb563b1" 
+callId="73f896c0fdb659be8b3300b79f41ff52@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 73f896c0fdb659be8b3300b79f41ff52@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353734-abec0aad6ed98ab4a37ae614bcb563b1
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528060824"
+isSender="false" 
+transactionId="z9hg4bk-353734-abec0aad6ed98ab4a37ae614bcb563b1" 
+callId="73f896c0fdb659be8b3300b79f41ff52@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 73f896c0fdb659be8b3300b79f41ff52@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353734-abec0aad6ed98ab4a37ae614bcb563b1
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528064840"
+isSender="false" 
+transactionId="z9hg4bk-353734-abec0aad6ed98ab4a37ae614bcb563b1" 
+callId="73f896c0fdb659be8b3300b79f41ff52@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 73f896c0fdb659be8b3300b79f41ff52@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353734-abec0aad6ed98ab4a37ae614bcb563b1
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528068843"
+isSender="false" 
+transactionId="z9hg4bk-353734-abec0aad6ed98ab4a37ae614bcb563b1" 
+callId="73f896c0fdb659be8b3300b79f41ff52@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 73f896c0fdb659be8b3300b79f41ff52@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353734-abec0aad6ed98ab4a37ae614bcb563b1
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528072849"
+isSender="false" 
+transactionId="z9hg4bk-353734-abec0aad6ed98ab4a37ae614bcb563b1" 
+callId="73f896c0fdb659be8b3300b79f41ff52@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 73f896c0fdb659be8b3300b79f41ff52@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353734-abec0aad6ed98ab4a37ae614bcb563b1
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528081020"
+isSender="false" 
+transactionId="z9hg4bk-363634-48fd6a221a4f2c7f49960caedba9de61" 
+callId="82f7c2c9660c57ee887ad936b77c1a06@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 82f7c2c9660c57ee887ad936b77c1a06@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-363634-48fd6a221a4f2c7f49960caedba9de61
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528081531"
+isSender="false" 
+transactionId="z9hg4bk-363634-48fd6a221a4f2c7f49960caedba9de61" 
+callId="82f7c2c9660c57ee887ad936b77c1a06@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 82f7c2c9660c57ee887ad936b77c1a06@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-363634-48fd6a221a4f2c7f49960caedba9de61
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528082512"
+isSender="false" 
+transactionId="z9hg4bk-363634-48fd6a221a4f2c7f49960caedba9de61" 
+callId="82f7c2c9660c57ee887ad936b77c1a06@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 82f7c2c9660c57ee887ad936b77c1a06@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-363634-48fd6a221a4f2c7f49960caedba9de61
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528084522"
+isSender="false" 
+transactionId="z9hg4bk-363634-48fd6a221a4f2c7f49960caedba9de61" 
+callId="82f7c2c9660c57ee887ad936b77c1a06@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 82f7c2c9660c57ee887ad936b77c1a06@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-363634-48fd6a221a4f2c7f49960caedba9de61
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528157266"
+isSender="false" 
+transactionId="z9hg4bk-333137-daf22dc37e565899cfd80e145a1c5806" 
+callId="561ca1e793e8f474aa43ad3c22858295@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 561ca1e793e8f474aa43ad3c22858295@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333137-daf22dc37e565899cfd80e145a1c5806
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528157775"
+isSender="false" 
+transactionId="z9hg4bk-333137-daf22dc37e565899cfd80e145a1c5806" 
+callId="561ca1e793e8f474aa43ad3c22858295@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 561ca1e793e8f474aa43ad3c22858295@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333137-daf22dc37e565899cfd80e145a1c5806
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417528158774"
+isSender="false" 
+transactionId="z9hg4bk-333137-daf22dc37e565899cfd80e145a1c5806" 
+callId="561ca1e793e8f474aa43ad3c22858295@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 561ca1e793e8f474aa43ad3c22858295@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333137-daf22dc37e565899cfd80e145a1c5806
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417530858705"
+isSender="false" 
+transactionId="z9hg4bk-383634-e35b6bd17c5c42c7f752acfa62253f73" 
+callId="e108fad934fa97d540cdac6306e31ff3@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: e108fad934fa97d540cdac6306e31ff3@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383634-e35b6bd17c5c42c7f752acfa62253f73
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417530859204"
+isSender="false" 
+transactionId="z9hg4bk-383634-e35b6bd17c5c42c7f752acfa62253f73" 
+callId="e108fad934fa97d540cdac6306e31ff3@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: e108fad934fa97d540cdac6306e31ff3@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383634-e35b6bd17c5c42c7f752acfa62253f73
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417530860202"
+isSender="false" 
+transactionId="z9hg4bk-383634-e35b6bd17c5c42c7f752acfa62253f73" 
+callId="e108fad934fa97d540cdac6306e31ff3@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: e108fad934fa97d540cdac6306e31ff3@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383634-e35b6bd17c5c42c7f752acfa62253f73
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417530862207"
+isSender="false" 
+transactionId="z9hg4bk-383634-e35b6bd17c5c42c7f752acfa62253f73" 
+callId="e108fad934fa97d540cdac6306e31ff3@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: e108fad934fa97d540cdac6306e31ff3@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383634-e35b6bd17c5c42c7f752acfa62253f73
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417530866214"
+isSender="false" 
+transactionId="z9hg4bk-383634-e35b6bd17c5c42c7f752acfa62253f73" 
+callId="e108fad934fa97d540cdac6306e31ff3@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: e108fad934fa97d540cdac6306e31ff3@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383634-e35b6bd17c5c42c7f752acfa62253f73
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417530870221"
+isSender="false" 
+transactionId="z9hg4bk-383634-e35b6bd17c5c42c7f752acfa62253f73" 
+callId="e108fad934fa97d540cdac6306e31ff3@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: e108fad934fa97d540cdac6306e31ff3@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383634-e35b6bd17c5c42c7f752acfa62253f73
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417530874236"
+isSender="false" 
+transactionId="z9hg4bk-383634-e35b6bd17c5c42c7f752acfa62253f73" 
+callId="e108fad934fa97d540cdac6306e31ff3@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: e108fad934fa97d540cdac6306e31ff3@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383634-e35b6bd17c5c42c7f752acfa62253f73
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417530878243"
+isSender="false" 
+transactionId="z9hg4bk-383634-e35b6bd17c5c42c7f752acfa62253f73" 
+callId="e108fad934fa97d540cdac6306e31ff3@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: e108fad934fa97d540cdac6306e31ff3@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383634-e35b6bd17c5c42c7f752acfa62253f73
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417530882254"
+isSender="false" 
+transactionId="z9hg4bk-383634-e35b6bd17c5c42c7f752acfa62253f73" 
+callId="e108fad934fa97d540cdac6306e31ff3@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: e108fad934fa97d540cdac6306e31ff3@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383634-e35b6bd17c5c42c7f752acfa62253f73
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417530886263"
+isSender="false" 
+transactionId="z9hg4bk-383634-e35b6bd17c5c42c7f752acfa62253f73" 
+callId="e108fad934fa97d540cdac6306e31ff3@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: e108fad934fa97d540cdac6306e31ff3@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383634-e35b6bd17c5c42c7f752acfa62253f73
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417533256412"
+isSender="false" 
+transactionId="z9hg4bk-3333-a55c760789bb3e7dcbae73604bb13a55" 
+callId="9e8f8caaf95f0303afb9f45b58fb1bef@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9e8f8caaf95f0303afb9f45b58fb1bef@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3333-a55c760789bb3e7dcbae73604bb13a55
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417533256506"
+isSender="true" 
+transactionId="z9hg4bk-3333-a55c760789bb3e7dcbae73604bb13a55" 
+callId="9e8f8caaf95f0303afb9f45b58fb1bef@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 MESSAGE
+Call-ID: 9e8f8caaf95f0303afb9f45b58fb1bef@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3333-a55c760789bb3e7dcbae73604bb13a55
+Content-Type: application/ListMessagesResult
+Content-Length: 80
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417533746316"
+isSender="false" 
+transactionId="z9hg4bk-383330-6e720083ae9655a0b540485ed1152f48" 
+callId="b9f76dffe097bd378a26e693fde4c690@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b9f76dffe097bd378a26e693fde4c690@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383330-6e720083ae9655a0b540485ed1152f48
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417533746415"
+isSender="true" 
+transactionId="z9hg4bk-383330-6e720083ae9655a0b540485ed1152f48" 
+callId="b9f76dffe097bd378a26e693fde4c690@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 MESSAGE
+Call-ID: b9f76dffe097bd378a26e693fde4c690@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-383330-6e720083ae9655a0b540485ed1152f48
+Content-Type: application/ListMessagesResult
+Content-Length: 80
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534202622"
+isSender="false" 
+transactionId="z9hg4bk-333535-2002f6b7f35d5672c48c6db51d04b37f" 
+callId="d2b17e189957dcb65363cd8ba9ba542a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d2b17e189957dcb65363cd8ba9ba542a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333535-2002f6b7f35d5672c48c6db51d04b37f
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534203129"
+isSender="false" 
+transactionId="z9hg4bk-333535-2002f6b7f35d5672c48c6db51d04b37f" 
+callId="d2b17e189957dcb65363cd8ba9ba542a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d2b17e189957dcb65363cd8ba9ba542a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333535-2002f6b7f35d5672c48c6db51d04b37f
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534204129"
+isSender="false" 
+transactionId="z9hg4bk-333535-2002f6b7f35d5672c48c6db51d04b37f" 
+callId="d2b17e189957dcb65363cd8ba9ba542a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d2b17e189957dcb65363cd8ba9ba542a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333535-2002f6b7f35d5672c48c6db51d04b37f
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534206133"
+isSender="false" 
+transactionId="z9hg4bk-333535-2002f6b7f35d5672c48c6db51d04b37f" 
+callId="d2b17e189957dcb65363cd8ba9ba542a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d2b17e189957dcb65363cd8ba9ba542a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333535-2002f6b7f35d5672c48c6db51d04b37f
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534210134"
+isSender="false" 
+transactionId="z9hg4bk-333535-2002f6b7f35d5672c48c6db51d04b37f" 
+callId="d2b17e189957dcb65363cd8ba9ba542a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d2b17e189957dcb65363cd8ba9ba542a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333535-2002f6b7f35d5672c48c6db51d04b37f
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534425482"
+isSender="false" 
+transactionId="z9hg4bk-313039-fcefe58c5ebe6828e7c6bb42b83bb26e" 
+callId="5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313039-fcefe58c5ebe6828e7c6bb42b83bb26e
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534425995"
+isSender="false" 
+transactionId="z9hg4bk-313039-fcefe58c5ebe6828e7c6bb42b83bb26e" 
+callId="5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313039-fcefe58c5ebe6828e7c6bb42b83bb26e
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534426988"
+isSender="false" 
+transactionId="z9hg4bk-313039-fcefe58c5ebe6828e7c6bb42b83bb26e" 
+callId="5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313039-fcefe58c5ebe6828e7c6bb42b83bb26e
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534429003"
+isSender="false" 
+transactionId="z9hg4bk-313039-fcefe58c5ebe6828e7c6bb42b83bb26e" 
+callId="5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313039-fcefe58c5ebe6828e7c6bb42b83bb26e
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534432999"
+isSender="false" 
+transactionId="z9hg4bk-313039-fcefe58c5ebe6828e7c6bb42b83bb26e" 
+callId="5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313039-fcefe58c5ebe6828e7c6bb42b83bb26e
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534437007"
+isSender="false" 
+transactionId="z9hg4bk-313039-fcefe58c5ebe6828e7c6bb42b83bb26e" 
+callId="5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 5282a1ddc56dd2d8129bf7f8968447bf@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313039-fcefe58c5ebe6828e7c6bb42b83bb26e
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534473825"
+isSender="false" 
+transactionId="z9hg4bk-343934-da8b904995e65998a0c718dc7848d977" 
+callId="1837fe510accc4f4947b1676f9f31391@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 1837fe510accc4f4947b1676f9f31391@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343934-da8b904995e65998a0c718dc7848d977
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534474333"
+isSender="false" 
+transactionId="z9hg4bk-343934-da8b904995e65998a0c718dc7848d977" 
+callId="1837fe510accc4f4947b1676f9f31391@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 1837fe510accc4f4947b1676f9f31391@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343934-da8b904995e65998a0c718dc7848d977
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534475332"
+isSender="false" 
+transactionId="z9hg4bk-343934-da8b904995e65998a0c718dc7848d977" 
+callId="1837fe510accc4f4947b1676f9f31391@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 1837fe510accc4f4947b1676f9f31391@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343934-da8b904995e65998a0c718dc7848d977
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417534477342"
+isSender="false" 
+transactionId="z9hg4bk-343934-da8b904995e65998a0c718dc7848d977" 
+callId="1837fe510accc4f4947b1676f9f31391@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 1837fe510accc4f4947b1676f9f31391@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343934-da8b904995e65998a0c718dc7848d977
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 20
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535074804"
+isSender="false" 
+transactionId="z9hg4bk-373536-32424004d04b2d293823f1e0e5243510" 
+callId="c475b52212ab381bf8059943d9382da1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: c475b52212ab381bf8059943d9382da1@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373536-32424004d04b2d293823f1e0e5243510
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535075313"
+isSender="false" 
+transactionId="z9hg4bk-373536-32424004d04b2d293823f1e0e5243510" 
+callId="c475b52212ab381bf8059943d9382da1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: c475b52212ab381bf8059943d9382da1@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373536-32424004d04b2d293823f1e0e5243510
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535076309"
+isSender="false" 
+transactionId="z9hg4bk-373536-32424004d04b2d293823f1e0e5243510" 
+callId="c475b52212ab381bf8059943d9382da1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: c475b52212ab381bf8059943d9382da1@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373536-32424004d04b2d293823f1e0e5243510
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535078312"
+isSender="false" 
+transactionId="z9hg4bk-373536-32424004d04b2d293823f1e0e5243510" 
+callId="c475b52212ab381bf8059943d9382da1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: c475b52212ab381bf8059943d9382da1@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373536-32424004d04b2d293823f1e0e5243510
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535082325"
+isSender="false" 
+transactionId="z9hg4bk-373536-32424004d04b2d293823f1e0e5243510" 
+callId="c475b52212ab381bf8059943d9382da1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: c475b52212ab381bf8059943d9382da1@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373536-32424004d04b2d293823f1e0e5243510
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535086330"
+isSender="false" 
+transactionId="z9hg4bk-373536-32424004d04b2d293823f1e0e5243510" 
+callId="c475b52212ab381bf8059943d9382da1@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: c475b52212ab381bf8059943d9382da1@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373536-32424004d04b2d293823f1e0e5243510
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535644145"
+isSender="false" 
+transactionId="z9hg4bk-343032-0c6ef26b400e7803aa104866339031a0" 
+callId="42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343032-0c6ef26b400e7803aa104866339031a0
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535644656"
+isSender="false" 
+transactionId="z9hg4bk-343032-0c6ef26b400e7803aa104866339031a0" 
+callId="42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343032-0c6ef26b400e7803aa104866339031a0
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535645652"
+isSender="false" 
+transactionId="z9hg4bk-343032-0c6ef26b400e7803aa104866339031a0" 
+callId="42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343032-0c6ef26b400e7803aa104866339031a0
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535647654"
+isSender="false" 
+transactionId="z9hg4bk-343032-0c6ef26b400e7803aa104866339031a0" 
+callId="42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343032-0c6ef26b400e7803aa104866339031a0
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535651665"
+isSender="false" 
+transactionId="z9hg4bk-343032-0c6ef26b400e7803aa104866339031a0" 
+callId="42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343032-0c6ef26b400e7803aa104866339031a0
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535655675"
+isSender="false" 
+transactionId="z9hg4bk-343032-0c6ef26b400e7803aa104866339031a0" 
+callId="42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 42b38908b54b43cf7d542d2d79a89d7b@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343032-0c6ef26b400e7803aa104866339031a0
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535694305"
+isSender="false" 
+transactionId="z9hg4bk-3234-2bb622f97b84c7be5d076992e4c29512" 
+callId="6e57a2b6c30a40aade7fec8e64638139@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 6e57a2b6c30a40aade7fec8e64638139@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3234-2bb622f97b84c7be5d076992e4c29512
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535694818"
+isSender="false" 
+transactionId="z9hg4bk-3234-2bb622f97b84c7be5d076992e4c29512" 
+callId="6e57a2b6c30a40aade7fec8e64638139@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 6e57a2b6c30a40aade7fec8e64638139@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3234-2bb622f97b84c7be5d076992e4c29512
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535695814"
+isSender="false" 
+transactionId="z9hg4bk-3234-2bb622f97b84c7be5d076992e4c29512" 
+callId="6e57a2b6c30a40aade7fec8e64638139@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 6e57a2b6c30a40aade7fec8e64638139@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3234-2bb622f97b84c7be5d076992e4c29512
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535697822"
+isSender="false" 
+transactionId="z9hg4bk-3234-2bb622f97b84c7be5d076992e4c29512" 
+callId="6e57a2b6c30a40aade7fec8e64638139@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 6e57a2b6c30a40aade7fec8e64638139@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3234-2bb622f97b84c7be5d076992e4c29512
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535738193"
+isSender="false" 
+transactionId="z9hg4bk-333734-ad0942b5ef8d08554088a83e8b6c82a4" 
+callId="48467d55f8ff7573f3a1235967552aed@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 48467d55f8ff7573f3a1235967552aed@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333734-ad0942b5ef8d08554088a83e8b6c82a4
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535738705"
+isSender="false" 
+transactionId="z9hg4bk-333734-ad0942b5ef8d08554088a83e8b6c82a4" 
+callId="48467d55f8ff7573f3a1235967552aed@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 48467d55f8ff7573f3a1235967552aed@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333734-ad0942b5ef8d08554088a83e8b6c82a4
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535739699"
+isSender="false" 
+transactionId="z9hg4bk-333734-ad0942b5ef8d08554088a83e8b6c82a4" 
+callId="48467d55f8ff7573f3a1235967552aed@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 48467d55f8ff7573f3a1235967552aed@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333734-ad0942b5ef8d08554088a83e8b6c82a4
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535793431"
+isSender="false" 
+transactionId="z9hg4bk-393238-8d11eed6b62acff5abb723eceb4548f8" 
+callId="81521e576a547142fac1750d2ae4b5c7@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 81521e576a547142fac1750d2ae4b5c7@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-393238-8d11eed6b62acff5abb723eceb4548f8
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535793938"
+isSender="false" 
+transactionId="z9hg4bk-393238-8d11eed6b62acff5abb723eceb4548f8" 
+callId="81521e576a547142fac1750d2ae4b5c7@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 81521e576a547142fac1750d2ae4b5c7@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-393238-8d11eed6b62acff5abb723eceb4548f8
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535794939"
+isSender="false" 
+transactionId="z9hg4bk-393238-8d11eed6b62acff5abb723eceb4548f8" 
+callId="81521e576a547142fac1750d2ae4b5c7@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 81521e576a547142fac1750d2ae4b5c7@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-393238-8d11eed6b62acff5abb723eceb4548f8
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535844157"
+isSender="false" 
+transactionId="z9hg4bk-3330-a9c8f8e9c43d0313cc0804be1fd57efe" 
+callId="d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3330-a9c8f8e9c43d0313cc0804be1fd57efe
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535844668"
+isSender="false" 
+transactionId="z9hg4bk-3330-a9c8f8e9c43d0313cc0804be1fd57efe" 
+callId="d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3330-a9c8f8e9c43d0313cc0804be1fd57efe
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535845665"
+isSender="false" 
+transactionId="z9hg4bk-3330-a9c8f8e9c43d0313cc0804be1fd57efe" 
+callId="d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3330-a9c8f8e9c43d0313cc0804be1fd57efe
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535847668"
+isSender="false" 
+transactionId="z9hg4bk-3330-a9c8f8e9c43d0313cc0804be1fd57efe" 
+callId="d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3330-a9c8f8e9c43d0313cc0804be1fd57efe
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535851678"
+isSender="false" 
+transactionId="z9hg4bk-3330-a9c8f8e9c43d0313cc0804be1fd57efe" 
+callId="d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3330-a9c8f8e9c43d0313cc0804be1fd57efe
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535855682"
+isSender="false" 
+transactionId="z9hg4bk-3330-a9c8f8e9c43d0313cc0804be1fd57efe" 
+callId="d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d60b97a507ed80eb95410eb19f12ac0a@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3330-a9c8f8e9c43d0313cc0804be1fd57efe
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535908702"
+isSender="false" 
+transactionId="z9hg4bk-393233-1e9be17d8741dcc0cfc68e3dd6f21569" 
+callId="27eac3b01621908cdd5f92af23a834da@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 27eac3b01621908cdd5f92af23a834da@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-393233-1e9be17d8741dcc0cfc68e3dd6f21569
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535909205"
+isSender="false" 
+transactionId="z9hg4bk-393233-1e9be17d8741dcc0cfc68e3dd6f21569" 
+callId="27eac3b01621908cdd5f92af23a834da@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 27eac3b01621908cdd5f92af23a834da@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-393233-1e9be17d8741dcc0cfc68e3dd6f21569
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535910207"
+isSender="false" 
+transactionId="z9hg4bk-393233-1e9be17d8741dcc0cfc68e3dd6f21569" 
+callId="27eac3b01621908cdd5f92af23a834da@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 27eac3b01621908cdd5f92af23a834da@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-393233-1e9be17d8741dcc0cfc68e3dd6f21569
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535912208"
+isSender="false" 
+transactionId="z9hg4bk-393233-1e9be17d8741dcc0cfc68e3dd6f21569" 
+callId="27eac3b01621908cdd5f92af23a834da@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 27eac3b01621908cdd5f92af23a834da@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-393233-1e9be17d8741dcc0cfc68e3dd6f21569
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535916215"
+isSender="false" 
+transactionId="z9hg4bk-393233-1e9be17d8741dcc0cfc68e3dd6f21569" 
+callId="27eac3b01621908cdd5f92af23a834da@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 27eac3b01621908cdd5f92af23a834da@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-393233-1e9be17d8741dcc0cfc68e3dd6f21569
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535920222"
+isSender="false" 
+transactionId="z9hg4bk-393233-1e9be17d8741dcc0cfc68e3dd6f21569" 
+callId="27eac3b01621908cdd5f92af23a834da@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 27eac3b01621908cdd5f92af23a834da@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-393233-1e9be17d8741dcc0cfc68e3dd6f21569
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417535924230"
+isSender="false" 
+transactionId="z9hg4bk-393233-1e9be17d8741dcc0cfc68e3dd6f21569" 
+callId="27eac3b01621908cdd5f92af23a834da@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 27eac3b01621908cdd5f92af23a834da@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-393233-1e9be17d8741dcc0cfc68e3dd6f21569
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417536030273"
+isSender="false" 
+transactionId="z9hg4bk-363832-df8085b7217d55f63c1272a9f4904824" 
+callId="6deb5535494be71e5edf43f84bd9f92b@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 6deb5535494be71e5edf43f84bd9f92b@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-363832-df8085b7217d55f63c1272a9f4904824
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417536030782"
+isSender="false" 
+transactionId="z9hg4bk-363832-df8085b7217d55f63c1272a9f4904824" 
+callId="6deb5535494be71e5edf43f84bd9f92b@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 6deb5535494be71e5edf43f84bd9f92b@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-363832-df8085b7217d55f63c1272a9f4904824
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417536031783"
+isSender="false" 
+transactionId="z9hg4bk-363832-df8085b7217d55f63c1272a9f4904824" 
+callId="6deb5535494be71e5edf43f84bd9f92b@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 6deb5535494be71e5edf43f84bd9f92b@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-363832-df8085b7217d55f63c1272a9f4904824
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417536033785"
+isSender="false" 
+transactionId="z9hg4bk-363832-df8085b7217d55f63c1272a9f4904824" 
+callId="6deb5535494be71e5edf43f84bd9f92b@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 6deb5535494be71e5edf43f84bd9f92b@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-363832-df8085b7217d55f63c1272a9f4904824
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417536211620"
+isSender="false" 
+transactionId="z9hg4bk-3538-43e1a1cb74ec51124fa8f76a5aa960a7" 
+callId="2ba1f0aa9e15ac03fc4be76139f8cb34@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 2ba1f0aa9e15ac03fc4be76139f8cb34@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3538-43e1a1cb74ec51124fa8f76a5aa960a7
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417536211738"
+isSender="true" 
+transactionId="z9hg4bk-3538-43e1a1cb74ec51124fa8f76a5aa960a7" 
+callId="2ba1f0aa9e15ac03fc4be76139f8cb34@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 MESSAGE
+Call-ID: 2ba1f0aa9e15ac03fc4be76139f8cb34@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3538-43e1a1cb74ec51124fa8f76a5aa960a7
+Message-Type: ListMessagesResult
+Content-Type: application/ListMessagesResult
+Content-Length: 80
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417536265691"
+isSender="false" 
+transactionId="z9hg4bk-323238-3687e6c2be7420edde202daa5cd2768b" 
+callId="cfeb27087f68fa32e6238022224520f6@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: cfeb27087f68fa32e6238022224520f6@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-323238-3687e6c2be7420edde202daa5cd2768b
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417536265735"
+isSender="true" 
+transactionId="z9hg4bk-323238-3687e6c2be7420edde202daa5cd2768b" 
+callId="cfeb27087f68fa32e6238022224520f6@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 MESSAGE
+Call-ID: cfeb27087f68fa32e6238022224520f6@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-323238-3687e6c2be7420edde202daa5cd2768b
+Message-Type: ListMessagesResult
+Content-Type: application/ListMessagesResult
+Content-Length: 80
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417537226830"
+isSender="false" 
+transactionId="z9hg4bk-373731-b19a2f49e052b5c96ba9b60cc1e2576c" 
+callId="9f116df98407ae23913f4173d5803034@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9f116df98407ae23913f4173d5803034@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373731-b19a2f49e052b5c96ba9b60cc1e2576c
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417537226904"
+isSender="true" 
+transactionId="z9hg4bk-373731-b19a2f49e052b5c96ba9b60cc1e2576c" 
+callId="9f116df98407ae23913f4173d5803034@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 MESSAGE
+Call-ID: 9f116df98407ae23913f4173d5803034@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373731-b19a2f49e052b5c96ba9b60cc1e2576c
+Message-Type: ListMessagesResult
+Content-Type: application/ListMessagesResult
+Content-Length: 80
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417537276765"
+isSender="false" 
+transactionId="z9hg4bk-323136-ae1b260783c5393097adca54ccff4a56" 
+callId="386140c622b76761a7a9cb5461591acf@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 386140c622b76761a7a9cb5461591acf@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-323136-ae1b260783c5393097adca54ccff4a56
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417537276858"
+isSender="true" 
+transactionId="z9hg4bk-323136-ae1b260783c5393097adca54ccff4a56" 
+callId="386140c622b76761a7a9cb5461591acf@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 MESSAGE
+Call-ID: 386140c622b76761a7a9cb5461591acf@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-323136-ae1b260783c5393097adca54ccff4a56
+Message-Type: ListMessagesResult
+Content-Type: application/ListMessagesResult
+Content-Length: 80
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417537348039"
+isSender="false" 
+transactionId="z9hg4bk-39-7dd679795a44a250342af144330f8f91" 
+callId="f1d093a15b0bddd3bd97d395b049cc80@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: f1d093a15b0bddd3bd97d395b049cc80@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-39-7dd679795a44a250342af144330f8f91
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417537348082"
+isSender="true" 
+transactionId="z9hg4bk-39-7dd679795a44a250342af144330f8f91" 
+callId="f1d093a15b0bddd3bd97d395b049cc80@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 MESSAGE
+Call-ID: f1d093a15b0bddd3bd97d395b049cc80@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-39-7dd679795a44a250342af144330f8f91
+Message-Type: ListMessagesResult
+Content-Type: application/ListMessagesResult
+Content-Length: 103
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417539510175"
+isSender="false" 
+transactionId="z9hg4bk-323035-f8045e3e34f28fda0ac955b91fb9759f" 
+callId="b7003c14bf2adf74167b660eb08ba8ac@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b7003c14bf2adf74167b660eb08ba8ac@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-323035-f8045e3e34f28fda0ac955b91fb9759f
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417539510228"
+isSender="true" 
+transactionId="z9hg4bk-323035-f8045e3e34f28fda0ac955b91fb9759f" 
+callId="b7003c14bf2adf74167b660eb08ba8ac@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 MESSAGE
+Call-ID: b7003c14bf2adf74167b660eb08ba8ac@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-323035-f8045e3e34f28fda0ac955b91fb9759f
+Message-Type: ListMessagesResult
+Content-Type: application/ListMessagesResult
+Content-Length: 103
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417540312893"
+isSender="false" 
+transactionId="z9hg4bk-333134-1716bf1b421887dcd989cc89ad82093e" 
+callId="2d33fb9b56ed9ba4083345aa8f854021@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 2d33fb9b56ed9ba4083345aa8f854021@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333134-1716bf1b421887dcd989cc89ad82093e
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417540312941"
+isSender="true" 
+transactionId="z9hg4bk-333134-1716bf1b421887dcd989cc89ad82093e" 
+callId="2d33fb9b56ed9ba4083345aa8f854021@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 MESSAGE
+Call-ID: 2d33fb9b56ed9ba4083345aa8f854021@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333134-1716bf1b421887dcd989cc89ad82093e
+Message-Type: ListMessagesResult
+Content-Type: application/ListMessagesResult
+Content-Length: 103
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417540320688"
+isSender="false" 
+transactionId="z9hg4bk-333134-124c224364eb61ec4dbd12ff4ae14c8c" 
+callId="a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1" 
+firstLine="INVITE sip:tester2@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:tester2@127.0.0.1:5060 SIP/2.0
+Call-ID: a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1
+CSeq: 1 INVITE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "tester2" <sip:tester2@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333134-124c224364eb61ec4dbd12ff4ae14c8c
+Max-Forwards: 70
+Contact: "tester1" <sip:tester1@127.0.0.1:5050>
+Content-Type: application/sdp
+Content-Length: 168
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417540320898"
+isSender="true" 
+transactionId="z9hg4bk-333134-124c224364eb61ec4dbd12ff4ae14c8c" 
+callId="a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "tester2" <sip:tester2@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333134-124c224364eb61ec4dbd12ff4ae14c8c
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417540321360"
+isSender="true" 
+transactionId="z9hg4bk-333134-124c224364eb61ec4dbd12ff4ae14c8c" 
+callId="a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 INVITE
+Call-ID: a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "tester2" <sip:tester2@there.com>;tag=4321
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333134-124c224364eb61ec4dbd12ff4ae14c8c
+Contact: "Voicemail" <sip:127.0.0.1:33871>
+Content-Type: application/sdp
+Content-Length: 168
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417540321376"
+isSender="false" 
+transactionId="z9hg4bk-333134-e705c32fdb4ead28d0fbfd11f2da207a" 
+callId="a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1" 
+firstLine="ACK sip:127.0.0.1:33871 SIP/2.0" 
+>
+<![CDATA[ACK sip:127.0.0.1:33871 SIP/2.0
+Call-ID: a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1
+CSeq: 1 ACK
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333134-e705c32fdb4ead28d0fbfd11f2da207a
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "tester2" <sip:tester2@there.com>;tag=4321
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417540347160"
+isSender="false" 
+transactionId="z9hg4bk-333134-cb5f961aee655473ab6882d4cc6fafee" 
+callId="a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1" 
+firstLine="BYE sip:127.0.0.1:33871 SIP/2.0" 
+>
+<![CDATA[BYE sip:127.0.0.1:33871 SIP/2.0
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333134-cb5f961aee655473ab6882d4cc6fafee
+CSeq: 2 BYE
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "tester2" <sip:tester2@there.com>;tag=4321
+Call-ID: a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417540347176"
+isSender="true" 
+transactionId="z9hg4bk-333134-cb5f961aee655473ab6882d4cc6fafee" 
+callId="a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 2 BYE
+Call-ID: a75685a3263f8392e5b0c4fbd5a3ceed@127.0.0.1
+From: "tester1" <sip:tester1@here.com>;tag=12345
+To: "tester2" <sip:tester2@there.com>;tag=4321
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333134-cb5f961aee655473ab6882d4cc6fafee
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= null
+javax.sip.STACK_NAME= voicemailserver
+javax.sip.ROUTER_PATH= null
+javax.sip.OUTBOUND_PROXY= null
+-->
+<description
+ logDescription="voicemailserver"
+ name="voicemailserver"
+ auxInfo="null"/>
+ 
+<message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417540413333"
+isSender="false" 
+transactionId="z9hg4bk-373232-790532db144b03cf807fdb792c9aa451" 
+callId="a77beae330afe70b02d2ceb5ff19ef46@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: a77beae330afe70b02d2ceb5ff19ef46@127.0.0.1
+CSeq: 1 MESSAGE
+From: "tester2" <sip:tester2@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373232-790532db144b03cf807fdb792c9aa451
+Max-Forwards: 70
+Contact: "tester2" <sip:tester2@127.0.0.1:5050>
+Message-Type: ListMessages
+Content-Type: application/ListMessages
+Content-Length: 7
+
+]]>
+</message>
+
+<message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417540413378"
+isSender="true" 
+transactionId="z9hg4bk-373232-790532db144b03cf807fdb792c9aa451" 
+callId="a77beae330afe70b02d2ceb5ff19ef46@127.0.0.1" 
+firstLine="SIP/2.0 200 OK" 
+>
+<![CDATA[SIP/2.0 200 OK
+CSeq: 1 MESSAGE
+Call-ID: a77beae330afe70b02d2ceb5ff19ef46@127.0.0.1
+From: "tester2" <sip:tester2@here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373232-790532db144b03cf807fdb792c9aa451
+Message-Type: ListMessagesResult
+Content-Type: application/ListMessagesResult
+Content-Length: 92
+
+]]>
+</message>
+

@@ -27167,3 +27167,1839 @@ java.lang.UnsupportedOperationException: Not supported yet.
 	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:427)
 	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
 	at java.lang.Thread.run(Thread.java:745)
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515458994"
+isSender="false" 
+transactionId="z9hg4bk-313336-febcdad86c8fe1e6f7407546c722841d" 
+callId="d657c37598ab8bef4e3d6b42d744315e@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d657c37598ab8bef4e3d6b42d744315e@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313336-febcdad86c8fe1e6f7407546c722841d
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processInvite(Server.java:227)
+	at server.Server.processRequest(Server.java:108)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515459369"
+isSender="true" 
+transactionId="z9hg4bk-313336-febcdad86c8fe1e6f7407546c722841d" 
+callId="d657c37598ab8bef4e3d6b42d744315e@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: d657c37598ab8bef4e3d6b42d744315e@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313336-febcdad86c8fe1e6f7407546c722841d
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515459489"
+isSender="false" 
+transactionId="z9hg4bk-313336-febcdad86c8fe1e6f7407546c722841d" 
+callId="d657c37598ab8bef4e3d6b42d744315e@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d657c37598ab8bef4e3d6b42d744315e@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313336-febcdad86c8fe1e6f7407546c722841d
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515459492"
+isSender="true" 
+transactionId="z9hg4bk-313336-febcdad86c8fe1e6f7407546c722841d" 
+callId="d657c37598ab8bef4e3d6b42d744315e@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: d657c37598ab8bef4e3d6b42d744315e@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313336-febcdad86c8fe1e6f7407546c722841d
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515629082"
+isSender="false" 
+transactionId="z9hg4bk-353230-33b740c99fd40c9eadf2fd5cd3089d21" 
+callId="2ff3907ad9daf254f0001099f357af1a@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 2ff3907ad9daf254f0001099f357af1a@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353230-33b740c99fd40c9eadf2fd5cd3089d21
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processInvite(Server.java:227)
+	at server.Server.processRequest(Server.java:108)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515629470"
+isSender="true" 
+transactionId="z9hg4bk-353230-33b740c99fd40c9eadf2fd5cd3089d21" 
+callId="2ff3907ad9daf254f0001099f357af1a@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 2ff3907ad9daf254f0001099f357af1a@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353230-33b740c99fd40c9eadf2fd5cd3089d21
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515629597"
+isSender="false" 
+transactionId="z9hg4bk-353230-33b740c99fd40c9eadf2fd5cd3089d21" 
+callId="2ff3907ad9daf254f0001099f357af1a@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 2ff3907ad9daf254f0001099f357af1a@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353230-33b740c99fd40c9eadf2fd5cd3089d21
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515629600"
+isSender="true" 
+transactionId="z9hg4bk-353230-33b740c99fd40c9eadf2fd5cd3089d21" 
+callId="2ff3907ad9daf254f0001099f357af1a@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 2ff3907ad9daf254f0001099f357af1a@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353230-33b740c99fd40c9eadf2fd5cd3089d21
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515715812"
+isSender="false" 
+transactionId="z9hg4bk-373037-53246029120338cf3189ceac1f72d0d5" 
+callId="1673a38c1b21114ec56b50edd6c0eb2c@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 1673a38c1b21114ec56b50edd6c0eb2c@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373037-53246029120338cf3189ceac1f72d0d5
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processInvite(Server.java:227)
+	at server.Server.processRequest(Server.java:108)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515716214"
+isSender="true" 
+transactionId="z9hg4bk-373037-53246029120338cf3189ceac1f72d0d5" 
+callId="1673a38c1b21114ec56b50edd6c0eb2c@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 1673a38c1b21114ec56b50edd6c0eb2c@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373037-53246029120338cf3189ceac1f72d0d5
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515772809"
+isSender="false" 
+transactionId="z9hg4bk-333438-bbdac43a04489098e0cf333869647739" 
+callId="95f330d1f8ee3a6ff1d364e065954046@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 95f330d1f8ee3a6ff1d364e065954046@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333438-bbdac43a04489098e0cf333869647739
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processInvite(Server.java:227)
+	at server.Server.processRequest(Server.java:108)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515773246"
+isSender="true" 
+transactionId="z9hg4bk-333438-bbdac43a04489098e0cf333869647739" 
+callId="95f330d1f8ee3a6ff1d364e065954046@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 95f330d1f8ee3a6ff1d364e065954046@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333438-bbdac43a04489098e0cf333869647739
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417515773317"
+isSender="false" 
+transactionId="z9hg4bk-333438-bbdac43a04489098e0cf333869647739" 
+callId="95f330d1f8ee3a6ff1d364e065954046@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 95f330d1f8ee3a6ff1d364e065954046@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333438-bbdac43a04489098e0cf333869647739
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417515773331"
+isSender="true" 
+transactionId="z9hg4bk-333438-bbdac43a04489098e0cf333869647739" 
+callId="95f330d1f8ee3a6ff1d364e065954046@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 95f330d1f8ee3a6ff1d364e065954046@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333438-bbdac43a04489098e0cf333869647739
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417525453554"
+isSender="false" 
+transactionId="z9hg4bk-343338-0ef123ba7b780bce0382a2914de1fe4a" 
+callId="75cc41ba120e340b538a9eb27f921227@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 75cc41ba120e340b538a9eb27f921227@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343338-0ef123ba7b780bce0382a2914de1fe4a
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417525453973"
+isSender="true" 
+transactionId="z9hg4bk-343338-0ef123ba7b780bce0382a2914de1fe4a" 
+callId="75cc41ba120e340b538a9eb27f921227@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 75cc41ba120e340b538a9eb27f921227@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343338-0ef123ba7b780bce0382a2914de1fe4a
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417525454064"
+isSender="false" 
+transactionId="z9hg4bk-343338-0ef123ba7b780bce0382a2914de1fe4a" 
+callId="75cc41ba120e340b538a9eb27f921227@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 75cc41ba120e340b538a9eb27f921227@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343338-0ef123ba7b780bce0382a2914de1fe4a
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417525454066"
+isSender="true" 
+transactionId="z9hg4bk-343338-0ef123ba7b780bce0382a2914de1fe4a" 
+callId="75cc41ba120e340b538a9eb27f921227@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 75cc41ba120e340b538a9eb27f921227@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-343338-0ef123ba7b780bce0382a2914de1fe4a
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417525658477"
+isSender="false" 
+transactionId="z9hg4bk-373939-09c5e0b363cbc09bc37b2ada838452a2" 
+callId="66359d351926ac4114dfcf139149e120@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 66359d351926ac4114dfcf139149e120@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373939-09c5e0b363cbc09bc37b2ada838452a2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processInvite(Server.java:228)
+	at server.Server.processRequest(Server.java:108)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417525658904"
+isSender="true" 
+transactionId="z9hg4bk-373939-09c5e0b363cbc09bc37b2ada838452a2" 
+callId="66359d351926ac4114dfcf139149e120@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 66359d351926ac4114dfcf139149e120@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373939-09c5e0b363cbc09bc37b2ada838452a2
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417525658989"
+isSender="false" 
+transactionId="z9hg4bk-373939-09c5e0b363cbc09bc37b2ada838452a2" 
+callId="66359d351926ac4114dfcf139149e120@127.0.0.1" 
+firstLine="INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[INVITE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 66359d351926ac4114dfcf139149e120@127.0.0.1
+CSeq: 1 INVITE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373939-09c5e0b363cbc09bc37b2ada838452a2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5060" 
+to="127.0.0.1:5050" 
+time="1417525658992"
+isSender="true" 
+transactionId="z9hg4bk-373939-09c5e0b363cbc09bc37b2ada838452a2" 
+callId="66359d351926ac4114dfcf139149e120@127.0.0.1" 
+firstLine="SIP/2.0 100 Trying" 
+>
+<![CDATA[SIP/2.0 100 Trying
+CSeq: 1 INVITE
+Call-ID: 66359d351926ac4114dfcf139149e120@127.0.0.1
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373939-09c5e0b363cbc09bc37b2ada838452a2
+Content-Length: 0
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526370176"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processRequest(Server.java:117)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526370677"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processRequest(Server.java:117)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526371662"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processRequest(Server.java:117)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526373665"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processRequest(Server.java:117)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526377669"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processRequest(Server.java:117)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526381676"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processRequest(Server.java:117)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526385678"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processRequest(Server.java:117)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526389679"
+isSender="false" 
+transactionId="z9hg4bk-3934-d6f165dd2a2093079ec41b77a45255c2" 
+callId="b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: b24d5400891a0c9fdad4d52ff4189bd2@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3934-d6f165dd2a2093079ec41b77a45255c2
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - null
+java.lang.NullPointerException
+	at server.Server.processRequest(Server.java:117)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526633220"
+isSender="false" 
+transactionId="z9hg4bk-313234-00331d59ece29aade742be51118cf75b" 
+callId="837fa47e2ee36f2901c3fce71e57a085@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 837fa47e2ee36f2901c3fce71e57a085@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313234-00331d59ece29aade742be51118cf75b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - [B cannot be cast to java.lang.String
+java.lang.ClassCastException: [B cannot be cast to java.lang.String
+	at server.Server.processMessage(Server.java:226)
+	at server.Server.processRequest(Server.java:110)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526633727"
+isSender="false" 
+transactionId="z9hg4bk-313234-00331d59ece29aade742be51118cf75b" 
+callId="837fa47e2ee36f2901c3fce71e57a085@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 837fa47e2ee36f2901c3fce71e57a085@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313234-00331d59ece29aade742be51118cf75b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526634721"
+isSender="false" 
+transactionId="z9hg4bk-313234-00331d59ece29aade742be51118cf75b" 
+callId="837fa47e2ee36f2901c3fce71e57a085@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 837fa47e2ee36f2901c3fce71e57a085@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313234-00331d59ece29aade742be51118cf75b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526636721"
+isSender="false" 
+transactionId="z9hg4bk-313234-00331d59ece29aade742be51118cf75b" 
+callId="837fa47e2ee36f2901c3fce71e57a085@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 837fa47e2ee36f2901c3fce71e57a085@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313234-00331d59ece29aade742be51118cf75b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526640727"
+isSender="false" 
+transactionId="z9hg4bk-313234-00331d59ece29aade742be51118cf75b" 
+callId="837fa47e2ee36f2901c3fce71e57a085@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 837fa47e2ee36f2901c3fce71e57a085@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-313234-00331d59ece29aade742be51118cf75b
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526718242"
+isSender="false" 
+transactionId="z9hg4bk-3837-e1b28a98649909ad7a1f0f9fbe0620ee" 
+callId="99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3837-e1b28a98649909ad7a1f0f9fbe0620ee
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - [B cannot be cast to java.lang.String
+java.lang.ClassCastException: [B cannot be cast to java.lang.String
+	at server.Server.processMessage(Server.java:226)
+	at server.Server.processRequest(Server.java:110)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526718759"
+isSender="false" 
+transactionId="z9hg4bk-3837-e1b28a98649909ad7a1f0f9fbe0620ee" 
+callId="99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3837-e1b28a98649909ad7a1f0f9fbe0620ee
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526719748"
+isSender="false" 
+transactionId="z9hg4bk-3837-e1b28a98649909ad7a1f0f9fbe0620ee" 
+callId="99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3837-e1b28a98649909ad7a1f0f9fbe0620ee
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526721761"
+isSender="false" 
+transactionId="z9hg4bk-3837-e1b28a98649909ad7a1f0f9fbe0620ee" 
+callId="99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 99b8aedb93035d4a6d0db3a7efcb62bb@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-3837-e1b28a98649909ad7a1f0f9fbe0620ee
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526803979"
+isSender="false" 
+transactionId="z9hg4bk-373130-3f6267b38aa6b7d0037c2cb6376ca542" 
+callId="9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373130-3f6267b38aa6b7d0037c2cb6376ca542
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - [B cannot be cast to java.lang.String
+java.lang.ClassCastException: [B cannot be cast to java.lang.String
+	at server.Server.processMessage(Server.java:226)
+	at server.Server.processRequest(Server.java:110)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526804487"
+isSender="false" 
+transactionId="z9hg4bk-373130-3f6267b38aa6b7d0037c2cb6376ca542" 
+callId="9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373130-3f6267b38aa6b7d0037c2cb6376ca542
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526805485"
+isSender="false" 
+transactionId="z9hg4bk-373130-3f6267b38aa6b7d0037c2cb6376ca542" 
+callId="9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373130-3f6267b38aa6b7d0037c2cb6376ca542
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526807487"
+isSender="false" 
+transactionId="z9hg4bk-373130-3f6267b38aa6b7d0037c2cb6376ca542" 
+callId="9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373130-3f6267b38aa6b7d0037c2cb6376ca542
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526811490"
+isSender="false" 
+transactionId="z9hg4bk-373130-3f6267b38aa6b7d0037c2cb6376ca542" 
+callId="9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: 9d01e56ef3bead6b280ffb92c7c8e2ca@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-373130-3f6267b38aa6b7d0037c2cb6376ca542
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526943464"
+isSender="false" 
+transactionId="z9hg4bk-333034-14879a2f2da4e3f78a78a0ddd2d2eceb" 
+callId="d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333034-14879a2f2da4e3f78a78a0ddd2d2eceb
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - [B cannot be cast to java.lang.String
+java.lang.ClassCastException: [B cannot be cast to java.lang.String
+	at server.Server.processMessage(Server.java:226)
+	at server.Server.processRequest(Server.java:110)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526943990"
+isSender="false" 
+transactionId="z9hg4bk-333034-14879a2f2da4e3f78a78a0ddd2d2eceb" 
+callId="d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333034-14879a2f2da4e3f78a78a0ddd2d2eceb
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526944982"
+isSender="false" 
+transactionId="z9hg4bk-333034-14879a2f2da4e3f78a78a0ddd2d2eceb" 
+callId="d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333034-14879a2f2da4e3f78a78a0ddd2d2eceb
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417526946984"
+isSender="false" 
+transactionId="z9hg4bk-333034-14879a2f2da4e3f78a78a0ddd2d2eceb" 
+callId="d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d5fb20c620c0a045faf93dcacd6b1703@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-333034-14879a2f2da4e3f78a78a0ddd2d2eceb
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527826758"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+ERROR - [B cannot be cast to java.lang.String
+java.lang.ClassCastException: [B cannot be cast to java.lang.String
+	at server.Server.processMessage(Server.java:225)
+	at server.Server.processRequest(Server.java:110)
+	at gov.nist.javax.sip.EventScanner.deliverEvent(EventScanner.java:230)
+	at gov.nist.javax.sip.EventScanner.run(EventScanner.java:519)
+	at java.lang.Thread.run(Thread.java:745)
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527827270"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527828264"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527830266"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527834272"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - <message
+from="127.0.0.1:5050" 
+to="127.0.0.1:5060" 
+time="1417527838286"
+isSender="false" 
+transactionId="z9hg4bk-353238-0a0acf630b14edd0de86cc8216e04292" 
+callId="d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1" 
+firstLine="MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0" 
+>
+<![CDATA[MESSAGE sip:Callee1@127.0.0.1:5060 SIP/2.0
+Call-ID: d31d2372b3cca9793fb1cf0c78dbe8c0@127.0.0.1
+CSeq: 1 MESSAGE
+From: <sip:here.com>;tag=12345
+To: "The Callee 1" <sip:Callee1@there.com>
+Via: SIP/2.0/UDP 127.0.0.1:5050;branch=z9hG4bK-353238-0a0acf630b14edd0de86cc8216e04292
+Max-Forwards: 70
+Contact: <sip:127.0.0.1:5050>
+Content-Type: application/ListMessages
+Content-Length: 13
+
+]]>
+</message>
+
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+ERROR - gov.nist.javax.sip.SipStackImpl.createListeningPoint(SipStackImpl.java:1549) [Invalid argument address = 127.0.0.1 port = 5060 transport = udp]
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+ERROR - gov.nist.javax.sip.SipStackImpl.createListeningPoint(SipStackImpl.java:1549) [Invalid argument address = 127.0.0.1 port = 5060 transport = udp]
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+ERROR - gov.nist.javax.sip.SipStackImpl.createListeningPoint(SipStackImpl.java:1549) [Invalid argument address = 127.0.0.1 port = 5060 transport = udp]
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+ERROR - gov.nist.javax.sip.SipStackImpl.createListeningPoint(SipStackImpl.java:1549) [Invalid argument address = 127.0.0.1 port = 5060 transport = udp]
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+ERROR - gov.nist.javax.sip.SipStackImpl.createListeningPoint(SipStackImpl.java:1549) [Invalid argument address = 127.0.0.1 port = 5060 transport = udp]
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started
+INFO - value -1000 will be used for reliableConnectionKeepAliveTimeout stack property
+INFO - Setting Stack Thread priority to 10
+WARN - using default tls security policy
+WARN - Using default keystore type jks
+WARN - TLS server settings will be inactive - TLS key store will use JVM defaults keyStoreType=jks javax.net.ssl.keyStore=null javax.net.ssl.keyStorePassword=null
+INFO - javax.net.ssl.trustStorePassword is null, using the password passed through javax.net.ssl.keyStorePassword
+WARN - Using default truststore type jks
+WARN - TLS trust settings will be inactive - TLS trust store will use JVM defaults. trustStoreType=jks javax.net.ssl.trustStore=null javax.net.ssl.trustStorePassword=null
+INFO - the sip stack timer gov.nist.javax.sip.stack.timers.DefaultSipTimer has been started

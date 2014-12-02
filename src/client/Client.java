@@ -5,9 +5,12 @@
  */
 package client;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.gstreamer.Gst;
+import server.Server;
 import util.Config;
 
 /**
@@ -24,6 +27,8 @@ public final class Client {
     
     private SipListenerClient slc;
     
+    private List<String>messagesList = new ArrayList<>();
+    
     public Client(){
         // initialize GSstreamer with some debug
         Gst.init("SIP Voicemail", new String[] { "--gst-debug-level=2",
@@ -39,14 +44,16 @@ public final class Client {
         } catch (InterruptedException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
         }
-        slc.init();
-        System.out.println("Voice Mail Client listening on "+slc.getPort());
+        //slc.init();  //moving init to when signin happen
+        //System.out.println("Voice Mail Client listening on "+slc.getPort());
         
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            
+            @Override
             public void run() {
-                guiClient = new GUIClient();
+                guiClient = new GUIClient(Client.this);
                 guiClient.setVisible(true);
             }
         });
@@ -74,7 +81,12 @@ public final class Client {
 
     void signIn(String myName) {
         this.myName = myName;
-        guiClient.getLabelMainMessage().setText("Hi, "+myName+" these are your messages: ");
+        try{
+            slc.init();
+            System.out.println("Voice Mail Client listening on "+slc.getPort());
+        }catch(Exception ex){
+            System.out.println(ex);
+        }
     }
     
     public String getMyName(){
@@ -82,10 +94,44 @@ public final class Client {
     }
     
     public static void main(String []args){
+        
+        
+        //start the server
+        Server server = new Server();
+        System.out.println("server created");
+        
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        //start the client
         Client client = new Client();
         System.out.println("client started");
         
+    }
+    
+    public void updateVoiceMailMessagesList(List<String> list) {
+        messagesList = list;
+         if (messagesList!=null){
+            String[]messagesArray = new String[messagesList.size()];
+            for (int i=0;i<messagesArray.length;i++){
+                messagesArray[i]=messagesList.get(i);
+                System.out.println(messagesArray[i]);
+            }
+            guiClient.getListMessagesList().setModel(new javax.swing.DefaultComboBoxModel(messagesArray));
+        }
         
+    }
+
+    public void leaveAMessage(String toName) {
+        slc.sendLeaveAMessageRequest(toName);
+    }
+
+    void stopSendingMessage() {
+        slc.sendBye();
     }
     
 }

@@ -8,9 +8,12 @@ package client;
 import util.Config;
 import client.ClientAudioReceiver;
 import client.ClientAudioSender;
+import java.io.ByteArrayInputStream;
+import java.io.ObjectInputStream;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -67,14 +70,14 @@ public class SipListenerClient implements SipListener{
     private ListeningPoint lp;
     private SipProvider sipProvider;
     private ContactHeader contactHeader;
-    private ClientTransaction inviteTid;
+    
     private Dialog dialog;
     
-    /** My IP address (to put in SDP offers) */
     private String myAddress;
-    /** SIP listening port */
     private int myPort;
     
+    private final String peerHostPort = Config.serverAddress+":"+Config.serverPort;
+    private final String transport = "udp";
    // private int myRTPPort;
     
     public SipListenerClient(Client clientt){
@@ -145,10 +148,11 @@ public class SipListenerClient implements SipListener{
             return;
         }
         
-        
         System.out.println("transaction state is " + tid.getState());
         System.out.println("Dialog = " + tid.getDialog());
-        System.out.println("Dialog State is " + tid.getDialog().getState());
+        if (tid.getDialog()!=null){
+            System.out.println("Dialog State is " + tid.getDialog().getState());
+        }
         
         try {
             if (response.getStatusCode() == Response.OK) {
@@ -195,6 +199,22 @@ public class SipListenerClient implements SipListener{
 
                     }
 
+                }else if (cseq.getMethod().equals(Request.MESSAGE)){
+                    Header messageTypeHeader = response.getHeader("Message-Type");
+                    String messageTypeHeaderString0 = messageTypeHeader.toString().split(" ")[1];
+                    String messageTypeHeaderString = messageTypeHeaderString0.substring(0,messageTypeHeaderString0.length()-2);
+                    if (messageTypeHeaderString.equalsIgnoreCase(Config.LIST_MESSAGE_RESULT)){
+                        System.out.println("received list message result");
+                        
+                        byte[] bytesContent = response.getRawContent();
+                        
+                        ByteArrayInputStream bisFilleNames = new ByteArrayInputStream(bytesContent);
+                        ObjectInputStream ois = new ObjectInputStream(bisFilleNames);
+                        List<String> fileNamesList = (List<String>)ois.readObject();
+                        client.updateVoiceMailMessagesList(fileNamesList);
+                        
+                    }
+                    
                 }
             }
         } catch (Exception ex) {
@@ -249,8 +269,7 @@ public class SipListenerClient implements SipListener{
         sipFactory.setPathName("gov.nist");
         
         Properties properties = new Properties();
-        String transport = "udp";
-        String peerHostPort = Config.serverAddress+":"+Config.serverPort;
+        
         properties.setProperty("javax.sip.OUTBOUND_PROXY", peerHostPort + "/"
                         + transport);
         properties.setProperty("javax.sip.STACK_NAME", "voicemailclient");
@@ -329,14 +348,14 @@ public class SipListenerClient implements SipListener{
 
                 // Create ContentTypeHeader
                 ContentTypeHeader contentTypeHeader = headerFactory
-                                .createContentTypeHeader("application", "sdp");
+                                .createContentTypeHeader("application", "ListMessages");
 
                 // Create a new CallId header
                 CallIdHeader callIdHeader = sipProvider.getNewCallId();
 
                 // Create a new Cseq header
                 CSeqHeader cSeqHeader = headerFactory.createCSeqHeader(1L,
-                                Request.INVITE);
+                                Request.MESSAGE);
 
                 // Create a new MaxForwardsHeader
                 MaxForwardsHeader maxForwards = headerFactory
@@ -345,7 +364,7 @@ public class SipListenerClient implements SipListener{
                 
                 // Create the request.
                 Request request = messageFactory.createRequest(requestURI,
-                                Request.INVITE, callIdHeader, cSeqHeader, fromHeader,
+                                Request.MESSAGE, callIdHeader, cSeqHeader, fromHeader,
                                 toHeader, viaHeaders, maxForwards);
                 // Create contact headers
                 String host = Config.myClientAddress;
@@ -370,35 +389,11 @@ public class SipListenerClient implements SipListener{
                 // You can add extension headers of your own making
                 // to the outgoing SIP request.
                 // Add the extension header.
-                //Header extensionHeader = headerFactory.createHeader("My-Header",
-                //                "my header value");
-                //request.addHeader(extensionHeader);
-                    
-                // create my SDP offer
-                SessionDescription clientSdp = SdpTool.fromString("v=0\n"// protocol
-                        // version
-                        + "o=Voicemail "
-                        + new Date().getTime()
-                        + " "
-                        + new Date().getTime()
-                        + " IN IP4 "
-                        + myAddress
-                        + "\n"
-                        + "c= IN IP4 "
-                        + myAddress
-                        + "\n"
-                        + // originator
-                        "s=Voicemail\n"
-                        + // session name
-                        "t=0 0\n"
-                        + "m=audio "
-                        + client.getCAReceiver().getPort()
-                        + " RTP/AVP 96\n"
-                        + "a=rtcp:"
-                        + (client.getCAReceiver().getPort() + 1)
-                        + "\n"
-                        + "a=rtpmap:96 speex/16000");
-                byte[] contents = clientSdp.toString().getBytes();
+                Header extensionHeader = headerFactory.createHeader("Message-Type",
+                                Config.LIST_MESSAGE);
+                request.addHeader(extensionHeader);
+                
+                byte[] contents = client.getMyName().getBytes();
 
                 request.setContent(contents, contentTypeHeader);
                 // You can add as many extension headers as you
@@ -413,14 +408,14 @@ public class SipListenerClient implements SipListener{
               //  request.addHeader(callInfoHeader);
 
                 // Create the client transaction.
-                inviteTid = sipProvider.getNewClientTransaction(request);
+                ClientTransaction inviteTid = sipProvider.getNewClientTransaction(request);
 
                 System.out.println("inviteTid = " + inviteTid);
 
                 // send the request out.
 
                 inviteTid.sendRequest();
-                System.out.println("call request sent to server");
+                System.out.println("first list request sent to server");
                 
                 dialog = inviteTid.getDialog();
 
@@ -453,8 +448,154 @@ public class SipListenerClient implements SipListener{
     }
     
     
-    public void sendALeaveMessageRequest(){
+    public void sendLeaveAMessageRequest(String toName){
+        try {
+            /////////////
+            String fromName = client.getMyName();
+            String fromSipAddress = "here.com";
+            String fromDisplayName = client.getMyName();
+
+            String toSipAddress = "there.com";
+            String toUser = toName;
+            String toDisplayName = toName;
+
+            // create >From Header        
+            SipURI fromAddress = addressFactory.createSipURI(fromName,
+                    fromSipAddress);
+
+            Address fromNameAddress = addressFactory.createAddress(fromAddress);
+            fromNameAddress.setDisplayName(fromDisplayName);
+            FromHeader fromHeader = headerFactory.createFromHeader(
+                    fromNameAddress, "12345");
+
+            // create To Header
+            SipURI toAddress = addressFactory
+                    .createSipURI(toUser, toSipAddress);
+            Address toNameAddress = addressFactory.createAddress(toAddress);
+            toNameAddress.setDisplayName(toDisplayName);
+            ToHeader toHeader = headerFactory.createToHeader(toNameAddress,
+                    null);
+
+            // create Request URI
+            SipURI requestURI = addressFactory.createSipURI(toUser,
+                    peerHostPort);
+
+                // Create ViaHeaders
+            ArrayList<ViaHeader> viaHeaders = new ArrayList<>();
+            String ipAddress = lp.getIPAddress();
+            ViaHeader viaHeader = headerFactory.createViaHeader(ipAddress,
+                    sipProvider.getListeningPoint(transport).getPort(),
+                    transport, null);
+
+            // add via headers
+            viaHeaders.add(viaHeader);
+
+            // Create ContentTypeHeader
+            ContentTypeHeader contentTypeHeader = headerFactory
+                    .createContentTypeHeader("application", "sdp");
+
+            // Create a new CallId header
+            CallIdHeader callIdHeader = sipProvider.getNewCallId();
+
+            // Create a new Cseq header
+            CSeqHeader cSeqHeader = headerFactory.createCSeqHeader(1L,
+                    Request.INVITE);
+
+            // Create a new MaxForwardsHeader
+            MaxForwardsHeader maxForwards = headerFactory
+                    .createMaxForwardsHeader(70);
+
+            // Create the request.
+            Request request = messageFactory.createRequest(requestURI,
+                    Request.INVITE, callIdHeader, cSeqHeader, fromHeader,
+                    toHeader, viaHeaders, maxForwards);
+            // Create contact headers
+            String host = Config.myClientAddress;
+
+            SipURI contactUrl = addressFactory.createSipURI(fromName, host);
+            contactUrl.setPort(lp.getPort());
+            contactUrl.setLrParam();
+
+            // Create the contact name address.
+            SipURI contactURI = addressFactory.createSipURI(fromName, host);
+            contactURI.setPort(sipProvider.getListeningPoint(transport)
+                    .getPort());
+
+            Address contactAddress = addressFactory.createAddress(contactURI);
+
+            // Add the contact address.
+            contactAddress.setDisplayName(fromName);
+
+            contactHeader = headerFactory.createContactHeader(contactAddress);
+            request.addHeader(contactHeader);
+
+                // You can add extension headers of your own making
+            // to the outgoing SIP request.
+            // Add the extension header.
+            //Header extensionHeader = headerFactory.createHeader("My-Header",
+            //                "my header value");
+            //request.addHeader(extensionHeader);
+            // create my SDP offer
+            SessionDescription clientSdp = SdpTool.fromString("v=0\n"// protocol
+                    // version
+                    + "o=Voicemail "
+                    + new Date().getTime()
+                    + " "
+                    + new Date().getTime()
+                    + " IN IP4 "
+                    + myAddress
+                    + "\n"
+                    + "c= IN IP4 "
+                    + myAddress
+                    + "\n"
+                    + // originator
+                    "s=Voicemail\n"
+                    + // session name
+                    "t=0 0\n"
+                    + "m=audio "
+                    + client.getCAReceiver().getPort()
+                    + " RTP/AVP 96\n"
+                    + "a=rtcp:"
+                    + (client.getCAReceiver().getPort() + 1)
+                    + "\n"
+                    + "a=rtpmap:96 speex/16000");
+            byte[] contents = clientSdp.toString().getBytes();
+
+            request.setContent(contents, contentTypeHeader);
+                // You can add as many extension headers as you
+            // want.
+
+               // extensionHeader = headerFactory.createHeader("My-Other-Header",
+            //                 "my new header value ");
+            // request.addHeader(extensionHeader);
+               // Header callInfoHeader = headerFactory.createHeader("Call-Info",
+            //                 "<http://www.antd.nist.gov>");
+            //  request.addHeader(callInfoHeader);
+            // Create the client transaction.
+            //inviteTid = sipProvider.getNewClientTransaction(request);
+            //////////////
+            
+            /////
+            ClientTransaction inviteTid = sipProvider.getNewClientTransaction(request);
+            System.out.println("inviteTid = " + inviteTid);
+            
+            // send the request
+            inviteTid.sendRequest();
+            System.out.println("call request sent to server");
+            dialog = inviteTid.getDialog();
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            System.exit(0);
+        }
+        System.out.println("Leave a Message Request sent.");
         
     }
+    
+    public void sendMessagesListRequest(){
+    
+    }
+
+    
     
 }

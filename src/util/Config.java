@@ -20,6 +20,9 @@ public class Config {
     
     public static final String MESSAGE_RECORDING_ROOT = "/tmp/voicemailmessages/";
     
+    public static final String LIST_MESSAGE = "ListMessages";
+    
+    public static final String LIST_MESSAGE_RESULT = "ListMessagesResult";
     
     
 }

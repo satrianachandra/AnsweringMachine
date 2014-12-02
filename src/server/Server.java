@@ -9,8 +9,12 @@ import util.Config;
 import server.BusyTone;
 import server.MessageRecorder;
 import gov.nist.javax.sip.address.SipUri;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.ObjectOutputStream;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
@@ -42,6 +46,7 @@ import javax.sip.address.Address;
 import javax.sip.address.AddressFactory;
 import javax.sip.header.ContactHeader;
 import javax.sip.header.FromHeader;
+import javax.sip.header.Header;
 import javax.sip.header.HeaderFactory;
 import javax.sip.header.ToHeader;
 import javax.sip.message.MessageFactory;
@@ -56,7 +61,7 @@ import util.SdpTool;
  *
  * @author chandra
  */
-public class VoiceMailServer implements SipListener{
+public class Server implements SipListener{
 
     private AddressFactory addressFactory;
     private MessageFactory messageFactory;
@@ -72,7 +77,7 @@ public class VoiceMailServer implements SipListener{
 
     private List<MessageRecorder>listOfMessageRecorders;
     
-    public VoiceMailServer(){
+    public Server(){
         this.myAddress = Config.serverAddress;
         this.myPort = Config.serverPort;
         
@@ -106,7 +111,9 @@ public class VoiceMailServer implements SipListener{
         
         if (request.getMethod().equals(Request.INVITE)) {
                processInvite(requestEvent, serverTransaction);
-        } else if (request.getMethod().equals(Request.ACK)) {
+        }else if (request.getMethod().equals(Request.MESSAGE)) {
+               processMessage(requestEvent, serverTransaction);
+        }else if (request.getMethod().equals(Request.ACK)) {
                // processAck(requestEvent, serverTransaction);
         } else if (request.getMethod().equals(Request.BYE)) {
                processBye(requestEvent, serverTransaction);
@@ -212,6 +219,67 @@ public class VoiceMailServer implements SipListener{
         }
     }
     
+    private void processMessage(RequestEvent requestEvent, ServerTransaction serverTransaction) {
+        SipProvider sipProvider = (SipProvider) requestEvent.getSource();
+        Request request = requestEvent.getRequest();
+        ServerTransaction st = requestEvent.getServerTransaction();
+        
+        if (st == null) {
+            try {
+                st = sipProvider.getNewServerTransaction(request);
+                if (st.getState() != TransactionState.COMPLETED) {
+                    System.out.println("yo1");
+                    Header messageTypeHeader = request.getHeader("Message-Type");
+                    String messageTypeHeaderString0 = messageTypeHeader.toString().split(" ")[1];
+                    String messageTypeHeaderString = messageTypeHeaderString0.substring(0,messageTypeHeaderString0.length()-2);
+                    if (messageTypeHeaderString.equalsIgnoreCase(Config.LIST_MESSAGE)){
+                        String messageContent = new String(request.getRawContent());
+                        System.out.println("messageContent: "+messageContent);
+                        String userName = messageContent;
+                        System.out.println(userName+" is requesting to list his/her messages");
+                        System.out.println("yo2");
+                        File f = new File(Config.MESSAGE_RECORDING_ROOT+userName+"/");
+                        List<String> fileNames = new ArrayList<String>(Arrays.asList(f.list()));
+                        for (int i=0;i<fileNames.size();i++){
+                            System.out.println(i+": "+fileNames.get(i));
+                        }
+                        
+                        
+                        Response response = messageFactory.createResponse(
+                            Response.OK, request);
+                        
+                        Header extensionHeader = headerFactory.createHeader("Message-Type",
+                                Config.LIST_MESSAGE_RESULT);
+                        response.addHeader(extensionHeader);
+                        
+                        
+                        ByteArrayOutputStream bosFileNames = new ByteArrayOutputStream();
+                        ObjectOutputStream oos = new ObjectOutputStream(bosFileNames);
+                        oos.writeObject(fileNames);
+                        byte[] bytesFileNames = bosFileNames.toByteArray();
+                        
+                        response.setContent(bytesFileNames,
+                                headerFactory.createContentTypeHeader(
+                                        "application", "ListMessagesResult"));
+
+                        st.sendResponse(response);
+                        
+                    }
+
+                }
+            } catch (TransactionAlreadyExistsException ex) {
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (TransactionUnavailableException ex) {
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (Exception ex){
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }else{
+            System.out.println("st is not null");
+        }
+        
+    }
+    
     private void processInvite(RequestEvent requestEvent,
 			ServerTransaction serverTransaction) {
         SipProvider sipProvider = (SipProvider) requestEvent.getSource();
@@ -299,13 +367,13 @@ public class VoiceMailServer implements SipListener{
                 }
                 
             } catch (TransactionAlreadyExistsException ex) {
-                Logger.getLogger(VoiceMailServer.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
             } catch (TransactionUnavailableException ex) {
-                Logger.getLogger(VoiceMailServer.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SdpException | ParseException | InvalidArgumentException ex) {
-                Logger.getLogger(VoiceMailServer.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SipException ex) {
-                Logger.getLogger(VoiceMailServer.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         
@@ -384,12 +452,15 @@ public class VoiceMailServer implements SipListener{
     }
     
     
-    
+    /*
     public static void main(String []args){
-        
-        VoiceMailServer server = new VoiceMailServer();
+        //start the server
+        Server server = new Server();
         System.out.println("server created");
+        
     }
+    */
+    
 
    
 }
