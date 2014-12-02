@@ -36,7 +36,7 @@ public class ClientAudioSender extends Pipeline{
         capsRateFilter.setCaps(Caps.fromString("audio/x-raw-int,rate=16000"));
         
         final Element encoder = ElementFactory.make("speexenc", null);
-        encoder.set("quality", 6); // quality in [0,10]
+        encoder.set("quality", 10); // quality in [0,10]
         encoder.set("vad", true); // voice activity detection
         encoder.set("dtx", true); // discontinuous transmission
         

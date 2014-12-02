@@ -6,7 +6,7 @@
 package server;
 
 import util.Config;
-import server.BusyTone;
+import server.FileStreamer;
 import server.MessageRecorder;
 import gov.nist.javax.sip.address.SipUri;
 import java.io.ByteArrayOutputStream;
@@ -55,6 +55,7 @@ import javax.sip.message.Response;
 import org.gstreamer.Bus;
 import org.gstreamer.Gst;
 import org.gstreamer.GstObject;
+import org.gstreamer.State;
 import util.SdpTool;
 
 /**
@@ -77,11 +78,14 @@ public class Server implements SipListener{
 
     private List<MessageRecorder>listOfMessageRecorders;
     
+    private List<VoiceMessageData>listOfVoiceMessageDatas;
+    
     public Server(){
         this.myAddress = Config.serverAddress;
         this.myPort = Config.serverPort;
         
         listOfMessageRecorders = new ArrayList<>();
+        listOfVoiceMessageDatas = new ArrayList<>();
         
         // initialize GSstreamer with some debug
         Gst.init("SIP Voicemail", new String[] { "--gst-debug-level=2",
@@ -228,42 +232,79 @@ public class Server implements SipListener{
             try {
                 st = sipProvider.getNewServerTransaction(request);
                 if (st.getState() != TransactionState.COMPLETED) {
-                    System.out.println("yo1");
                     Header messageTypeHeader = request.getHeader("Message-Type");
                     String messageTypeHeaderString0 = messageTypeHeader.toString().split(" ")[1];
                     String messageTypeHeaderString = messageTypeHeaderString0.substring(0,messageTypeHeaderString0.length()-2);
+                    
+                    String caller = ((SipUri) ((FromHeader) request
+                                .getHeader("from")).getAddress().getURI())
+                                .getAuthority().getUser();
+                    System.out.println("Receive request Message from "+caller);
                     if (messageTypeHeaderString.equalsIgnoreCase(Config.LIST_MESSAGE)){
-                        String messageContent = new String(request.getRawContent());
-                        System.out.println("messageContent: "+messageContent);
-                        String userName = messageContent;
-                        System.out.println(userName+" is requesting to list his/her messages");
-                        System.out.println("yo2");
-                        File f = new File(Config.MESSAGE_RECORDING_ROOT+userName+"/");
-                        List<String> fileNames = new ArrayList<String>(Arrays.asList(f.list()));
-                        for (int i=0;i<fileNames.size();i++){
-                            System.out.println(i+": "+fileNames.get(i));
+                        
+                        
+                        
+                        //add this user to the voice messages list, if not yet,
+                        //this is not a good approach, we actually need to send SIGN_IN message
+                        //then add the user into this voice messages list
+                        boolean exist=false;
+                        int userPosition = -1;
+                        for (int i=0;i<listOfVoiceMessageDatas.size();i++){
+                            VoiceMessageData aData = listOfVoiceMessageDatas.get(i);
+                            if (aData.getCalleeName().equalsIgnoreCase(caller)){
+                                exist=true;
+                                userPosition = i;
+                            }
+                        }
+
+                        if (!exist){
+                            listOfVoiceMessageDatas.add(new VoiceMessageData(caller));
+                            userPosition = listOfVoiceMessageDatas.size()-1;
                         }
                         
-                        
-                        Response response = messageFactory.createResponse(
-                            Response.OK, request);
-                        
-                        Header extensionHeader = headerFactory.createHeader("Message-Type",
-                                Config.LIST_MESSAGE_RESULT);
-                        response.addHeader(extensionHeader);
-                        
-                        
-                        ByteArrayOutputStream bosFileNames = new ByteArrayOutputStream();
-                        ObjectOutputStream oos = new ObjectOutputStream(bosFileNames);
-                        oos.writeObject(fileNames);
-                        byte[] bytesFileNames = bosFileNames.toByteArray();
-                        
-                        response.setContent(bytesFileNames,
-                                headerFactory.createContentTypeHeader(
-                                        "application", "ListMessagesResult"));
+                        System.out.println(caller+" is requesting to list his/her messages");
+                        File f = new File(Config.MESSAGE_RECORDING_ROOT+caller+"/");
+                        if (f.list()!=null){
+                            List<String> fileNames = new ArrayList<String>(Arrays.asList(f.list()));
+                            
+                            listOfVoiceMessageDatas.get(userPosition).setListOfMessagesFile(fileNames);
+                            
+                            Response response = messageFactory.createResponse(
+                                Response.OK, request);
 
-                        st.sendResponse(response);
+                            Header extensionHeader = headerFactory.createHeader("Message-Type",
+                                    Config.LIST_MESSAGE_RESULT);
+                            response.addHeader(extensionHeader);
+
+
+                            ByteArrayOutputStream bosFileNames = new ByteArrayOutputStream();
+                            ObjectOutputStream oos = new ObjectOutputStream(bosFileNames);
+                            oos.writeObject(fileNames);
+                            byte[] bytesFileNames = bosFileNames.toByteArray();
+
+                            response.setContent(bytesFileNames,
+                                    headerFactory.createContentTypeHeader(
+                                            "application", "ListMessagesResult"));
+
+                            st.sendResponse(response);
+                        }
                         
+                    }else if(messageTypeHeaderString.equalsIgnoreCase(Config.LISTEN_MESSAGE)){
+                        String contentString = new String(request.getRawContent());
+                        System.out.println("|"+contentString+"|");
+                        String[]contentStringSplitted = contentString.split("#");
+                        
+                        int selectedFile = Integer.parseInt(contentStringSplitted[0]);
+                        System.out.println("playing file "+selectedFile);
+                        
+                        String clientIP = contentStringSplitted[1];
+                        int clientsrtpport = Integer.parseInt(contentStringSplitted[2]);
+                        
+                        for(VoiceMessageData aData: listOfVoiceMessageDatas){
+                            if (aData.getCalleeName().equalsIgnoreCase(caller)){
+                                play(caller,aData.getListOfMessagesFile().get(selectedFile),clientIP,clientsrtpport);
+                            }
+                        }
                     }
 
                 }
@@ -434,7 +475,7 @@ public class Server implements SipListener{
         listOfMessageRecorders.add(messageRecorder);
         
         // send the busy tone
-        final BusyTone busyTone = new BusyTone(clientAddr, clientRtpPort);
+        final FileStreamer busyTone = new FileStreamer(Config.WELCOME_SOUND,clientAddr, clientRtpPort);
         busyTone.getBus().connect(new Bus.EOS() {
                 public void endOfStream(GstObject source) {
                         /*
@@ -460,6 +501,21 @@ public class Server implements SipListener{
         
     }
     */
+
+    private void play(String calleeName, String filePath,String clientAddr, int clientRtpPort) {
+        final FileStreamer fileStreamer = new FileStreamer(Config.MESSAGE_RECORDING_ROOT+calleeName+"/"+filePath,clientAddr, clientRtpPort);
+        fileStreamer.getBus().connect(new Bus.EOS() {
+                public void endOfStream(GstObject source) {
+                        /*
+                         * when the welcome message has been fully played, launch
+                         * recording of message
+                         */
+                        fileStreamer.stop();
+                }
+        });
+        // play it
+        fileStreamer.play();
+    }
     
 
    

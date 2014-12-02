@@ -346,9 +346,7 @@ public class SipListenerClient implements SipListener{
                 // add via headers
                 viaHeaders.add(viaHeader);
 
-                // Create ContentTypeHeader
-                ContentTypeHeader contentTypeHeader = headerFactory
-                                .createContentTypeHeader("application", "ListMessages");
+                
 
                 // Create a new CallId header
                 CallIdHeader callIdHeader = sipProvider.getNewCallId();
@@ -393,19 +391,9 @@ public class SipListenerClient implements SipListener{
                                 Config.LIST_MESSAGE);
                 request.addHeader(extensionHeader);
                 
-                byte[] contents = client.getMyName().getBytes();
+                //byte[] contents = client.getMyName().getBytes();
 
-                request.setContent(contents, contentTypeHeader);
-                // You can add as many extension headers as you
-                // want.
-
-               // extensionHeader = headerFactory.createHeader("My-Other-Header",
-               //                 "my new header value ");
-               // request.addHeader(extensionHeader);
-
-               // Header callInfoHeader = headerFactory.createHeader("Call-Info",
-               //                 "<http://www.antd.nist.gov>");
-              //  request.addHeader(callInfoHeader);
+                //request.setContent(contents, contentTypeHeader);
 
                 // Create the client transaction.
                 ClientTransaction inviteTid = sipProvider.getNewClientTransaction(request);
@@ -440,8 +428,8 @@ public class SipListenerClient implements SipListener{
         }
         System.out.println("Sent bye.");
         
-        //stop receiver
-        client.getCAReceiver().stop();
+        //stop receiver, dont stop yet
+       // client.getCAReceiver().stop();
         
         //stop sender
         client.getCASender().stop();
@@ -562,18 +550,6 @@ public class SipListenerClient implements SipListener{
             byte[] contents = clientSdp.toString().getBytes();
 
             request.setContent(contents, contentTypeHeader);
-                // You can add as many extension headers as you
-            // want.
-
-               // extensionHeader = headerFactory.createHeader("My-Other-Header",
-            //                 "my new header value ");
-            // request.addHeader(extensionHeader);
-               // Header callInfoHeader = headerFactory.createHeader("Call-Info",
-            //                 "<http://www.antd.nist.gov>");
-            //  request.addHeader(callInfoHeader);
-            // Create the client transaction.
-            //inviteTid = sipProvider.getNewClientTransaction(request);
-            //////////////
             
             /////
             ClientTransaction inviteTid = sipProvider.getNewClientTransaction(request);
@@ -594,6 +570,106 @@ public class SipListenerClient implements SipListener{
     
     public void sendMessagesListRequest(){
     
+    }
+
+    void listenMessage(int selectedMessage) {
+        // Create the request.
+        
+        try {
+            String fromName = client.getMyName();
+            String fromSipAddress = "here.com";
+            String fromDisplayName = client.getMyName();
+            // create From Header
+            String toUser = "server";
+            String toSipAddress = "there.com";
+            String toDisplayName = "";
+
+                
+            
+            SipURI fromAddress = addressFactory.createSipURI(fromName,
+                            fromSipAddress);
+
+            Address fromNameAddress = addressFactory.createAddress(fromAddress);
+            fromNameAddress.setDisplayName(fromDisplayName);
+            FromHeader fromHeader = headerFactory.createFromHeader(
+                            fromNameAddress, "12345");
+
+            // Create a new CallId header
+            CallIdHeader callIdHeader = sipProvider.getNewCallId();
+
+            // Create a new Cseq header
+            CSeqHeader cSeqHeader = headerFactory.createCSeqHeader(1L,
+                            Request.MESSAGE);
+
+            // Create a new MaxForwardsHeader
+            MaxForwardsHeader maxForwards = headerFactory
+                                .createMaxForwardsHeader(70);
+
+            
+            // create To Header
+            SipURI toAddress = addressFactory
+                            .createSipURI(toUser, toSipAddress);
+            Address toNameAddress = addressFactory.createAddress(toAddress);
+            toNameAddress.setDisplayName(toDisplayName);
+            ToHeader toHeader = headerFactory.createToHeader(toNameAddress,
+                            null);
+
+            // create Request URI
+            SipURI requestURI = addressFactory.createSipURI(toUser,
+                            peerHostPort);
+
+            // Create ViaHeaders
+
+            ArrayList<ViaHeader> viaHeaders = new ArrayList<>();
+            String ipAddress = lp.getIPAddress();
+            ViaHeader viaHeader = headerFactory.createViaHeader(ipAddress,
+                            sipProvider.getListeningPoint(transport).getPort(),
+                            transport, null);
+
+            // add via headers
+            viaHeaders.add(viaHeader);
+            
+            // Create the request.
+            Request request = messageFactory.createRequest(requestURI,
+                            Request.MESSAGE, callIdHeader, cSeqHeader, fromHeader,
+                            toHeader, viaHeaders, maxForwards);
+
+            
+            Header extensionHeader = headerFactory.createHeader("Message-Type",
+                    Config.LISTEN_MESSAGE);
+            request.addHeader(extensionHeader);
+            
+            String contentString = String.valueOf(selectedMessage)+"#"+myAddress+"#"+client.getCAReceiver().getPort();
+            byte[] contents =  contentString.getBytes();
+
+            // Create ContentTypeHeader
+            ContentTypeHeader contentTypeHeader = headerFactory
+                    .createContentTypeHeader("application", Config.LISTEN_MESSAGE);
+            request.setContent(contents, contentTypeHeader);
+
+            // Create the client transaction.
+            ClientTransaction inviteTid = sipProvider.getNewClientTransaction(request);
+
+            System.out.println("inviteTid = " + inviteTid);
+
+            // send the request out.
+
+            inviteTid.sendRequest();
+            
+            System.out.println("first list request sent to server");
+
+            dialog = inviteTid.getDialog();
+        } catch (ParseException ex) {
+            Logger.getLogger(SipListenerClient.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SipException ex) {
+            Logger.getLogger(SipListenerClient.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InvalidArgumentException ex) {
+            Logger.getLogger(SipListenerClient.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        
+
+
     }
 
     

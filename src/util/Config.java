@@ -18,11 +18,13 @@ public class Config {
     public static final int clientPort = 5050;
     //public static final int clientRTPPort = 4040;
     
-    public static final String MESSAGE_RECORDING_ROOT = "/tmp/voicemailmessages/";
+    public static final String MESSAGE_RECORDING_ROOT = "/home/chandra/voicemailmessages/";
     
-    public static final String LIST_MESSAGE = "ListMessages";
+    public static final String WELCOME_SOUND = "/home/chandra/NetBeansProjects/AnsweringMachine/lib/voicemailgreetings.mp3";
     
+    public static final String LIST_MESSAGE = "ListMessages"; 
     public static final String LIST_MESSAGE_RESULT = "ListMessagesResult";
+    public static final String LISTEN_MESSAGE = "PlayMessage";
     
     
 }

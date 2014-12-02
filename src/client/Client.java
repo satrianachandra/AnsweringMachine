@@ -25,7 +25,7 @@ public final class Client {
     private ClientAudioReceiver caReceiver;
     private ClientAudioSender caSender;
     
-    private SipListenerClient slc;
+    private SipListenerClient sipListener;
     
     private List<String>messagesList = new ArrayList<>();
     
@@ -35,7 +35,7 @@ public final class Client {
                         "--gst-debug-no-color" });
         
         //begin slc initialization and sip init
-        slc = new SipListenerClient(this);
+        sipListener = new SipListenerClient(this);
         
         //Start receiving from the udpsrc
         startReceiving();
@@ -82,8 +82,8 @@ public final class Client {
     void signIn(String myName) {
         this.myName = myName;
         try{
-            slc.init();
-            System.out.println("Voice Mail Client listening on "+slc.getPort());
+            sipListener.init();
+            System.out.println("Voice Mail Client listening on "+sipListener.getPort());
         }catch(Exception ex){
             System.out.println(ex);
         }
@@ -127,11 +127,16 @@ public final class Client {
     }
 
     public void leaveAMessage(String toName) {
-        slc.sendLeaveAMessageRequest(toName);
+        sipListener.sendLeaveAMessageRequest(toName);
     }
 
     void stopSendingMessage() {
-        slc.sendBye();
+        sipListener.sendBye();
+    }
+
+    void listenMessage(int selectedMessage) {
+        startReceiving();
+        sipListener.listenMessage(selectedMessage);
     }
     
 }
