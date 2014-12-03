@@ -57,6 +57,7 @@ import org.gstreamer.Gst;
 import org.gstreamer.GstObject;
 import org.gstreamer.State;
 import util.SdpTool;
+import util.Util;
 
 /**
  *
@@ -300,11 +301,20 @@ public class Server implements SipListener{
                         String clientIP = contentStringSplitted[1];
                         int clientsrtpport = Integer.parseInt(contentStringSplitted[2]);
                         
-                        for(VoiceMessageData aData: listOfVoiceMessageDatas){
-                            if (aData.getCalleeName().equalsIgnoreCase(caller)){
-                                play(caller,aData.getListOfMessagesFile().get(selectedFile),clientIP,clientsrtpport);
-                            }
-                        }
+                        VoiceMessageData callersData = getVoiceDataByName(caller);
+                        play(caller,callersData.getListOfMessagesFile().get(selectedFile),clientIP,clientsrtpport);
+                        
+                        
+                    }else if (messageTypeHeaderString.equalsIgnoreCase(Config.DELETE_MESSAGE)){
+                        String contentString = new String(request.getRawContent());
+                        int messageToDelPos = Integer.parseInt(contentString);
+                        
+                        VoiceMessageData callersData = getVoiceDataByName(caller);
+                        String fileLocation = Config.MESSAGE_RECORDING_ROOT+caller+"/"+callersData.getListOfMessagesFile().get(messageToDelPos);
+                        System.out.println("file to delete: "+fileLocation);
+                        Util.deleteFile(fileLocation);
+                        callersData.getListOfMessagesFile().remove(messageToDelPos);
+                        
                     }
 
                 }
@@ -502,6 +512,15 @@ public class Server implements SipListener{
     }
     */
 
+    private VoiceMessageData getVoiceDataByName(String name){
+        for(VoiceMessageData aData: listOfVoiceMessageDatas){
+            if (aData.getCalleeName().equalsIgnoreCase(name)){
+                return aData;
+            }
+        }
+        return null;
+    }
+    
     private void play(String calleeName, String filePath,String clientAddr, int clientRtpPort) {
         final FileStreamer fileStreamer = new FileStreamer(Config.MESSAGE_RECORDING_ROOT+calleeName+"/"+filePath,clientAddr, clientRtpPort);
         fileStreamer.getBus().connect(new Bus.EOS() {
@@ -516,6 +535,8 @@ public class Server implements SipListener{
         // play it
         fileStreamer.play();
     }
+
+    
     
 
    

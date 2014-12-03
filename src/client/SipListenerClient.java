@@ -568,11 +568,9 @@ public class SipListenerClient implements SipListener{
         
     }
     
-    public void sendMessagesListRequest(){
-    
-    }
+   
 
-    void listenMessage(int selectedMessage) {
+    private void sendMessageRequest(String messageType, String contentString ){
         // Create the request.
         
         try {
@@ -636,10 +634,9 @@ public class SipListenerClient implements SipListener{
 
             
             Header extensionHeader = headerFactory.createHeader("Message-Type",
-                    Config.LISTEN_MESSAGE);
+                    messageType);
             request.addHeader(extensionHeader);
             
-            String contentString = String.valueOf(selectedMessage)+"#"+myAddress+"#"+client.getCAReceiver().getPort();
             byte[] contents =  contentString.getBytes();
 
             // Create ContentTypeHeader
@@ -669,7 +666,25 @@ public class SipListenerClient implements SipListener{
 
         
 
+    }
+    
+    public void sendMessagesListRequest(){
+        String contentString = "";
+        String messageType = Config.LIST_MESSAGE;
+        sendMessageRequest(messageType, contentString);
+    }
+    
+    void listenMessage(int selectedMessage) { 
+        String contentString = String.valueOf(selectedMessage)+"#"+myAddress+"#"+client.getCAReceiver().getPort();
+        String messageType = Config.LISTEN_MESSAGE;
+        sendMessageRequest(messageType, contentString);
+    }
 
+    void removeMessage(int selectedMessage) {
+        String contentString = String.valueOf(selectedMessage);
+        String messageType = Config.DELETE_MESSAGE;
+        sendMessageRequest(messageType, contentString);
+        
     }
 
     

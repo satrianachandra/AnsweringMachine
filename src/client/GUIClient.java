@@ -23,6 +23,8 @@ public class GUIClient extends javax.swing.JFrame {
         initComponents();
         panelWelcome.setVisible(true);
         panelMain.setVisible(false);
+        
+        buttonStopLeavingAMessage.setEnabled(false);
     }
 
     public void SetVoiceMailClient(Client client){
@@ -53,13 +55,13 @@ public class GUIClient extends javax.swing.JFrame {
         labelMainMessage = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         listMessagesList = new javax.swing.JList();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        buttonListenMessage = new javax.swing.JButton();
+        buttonDeleteMessage = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         textFieldToName = new javax.swing.JTextField();
         buttonLeaveAMessage = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        buttonStopLeavingAMessage = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -123,14 +125,19 @@ public class GUIClient extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(listMessagesList);
 
-        jButton1.setText("listen");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonListenMessage.setText("listen");
+        buttonListenMessage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                buttonListenMessageActionPerformed(evt);
             }
         });
 
-        jButton2.setText("delete");
+        buttonDeleteMessage.setText("delete");
+        buttonDeleteMessage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonDeleteMessageActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Wanna leave a message?");
 
@@ -143,10 +150,10 @@ public class GUIClient extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("stop");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonStopLeavingAMessage.setText("stop");
+        buttonStopLeavingAMessage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                buttonStopLeavingAMessageActionPerformed(evt);
             }
         });
 
@@ -177,9 +184,9 @@ public class GUIClient extends javax.swing.JFrame {
                                 .addComponent(buttonLeaveAMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(89, 89, 89)))
                         .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(buttonListenMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(buttonDeleteMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                            .addComponent(buttonStopLeavingAMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(53, 53, 53))))
         );
         panelMainLayout.setVerticalGroup(
@@ -191,9 +198,9 @@ public class GUIClient extends javax.swing.JFrame {
                 .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelMainLayout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(buttonListenMessage)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2)))
+                        .addComponent(buttonDeleteMessage)))
                 .addGap(26, 26, 26)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
@@ -202,7 +209,7 @@ public class GUIClient extends javax.swing.JFrame {
                     .addComponent(textFieldToName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
+                    .addComponent(buttonStopLeavingAMessage)
                     .addComponent(buttonLeaveAMessage))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -239,25 +246,32 @@ public class GUIClient extends javax.swing.JFrame {
         client.leaveAMessage(textFieldToName.getText());
     }//GEN-LAST:event_buttonLeaveAMessageActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void buttonStopLeavingAMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonStopLeavingAMessageActionPerformed
         client.stopSendingMessage();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_buttonStopLeavingAMessageActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void buttonListenMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonListenMessageActionPerformed
         int selectedMessage = listMessagesList.getSelectedIndex();
         if (selectedMessage != -1){
            client.listenMessage(selectedMessage);
         }
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_buttonListenMessageActionPerformed
+
+    private void buttonDeleteMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDeleteMessageActionPerformed
+        int selectedMessage = listMessagesList.getSelectedIndex();
+        if (selectedMessage != -1){
+           client.deleteMessage(selectedMessage);
+        }
+    }//GEN-LAST:event_buttonDeleteMessageActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonDeleteMessage;
     private javax.swing.JButton buttonLeaveAMessage;
+    private javax.swing.JButton buttonListenMessage;
     private javax.swing.JButton buttonSignIn;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton buttonStopLeavingAMessage;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -275,5 +289,13 @@ public class GUIClient extends javax.swing.JFrame {
 
     public javax.swing.JLabel getLabelMainMessage(){
         return labelMainMessage;
+    }
+    
+    public javax.swing.JButton getButtonLeaveAMessage(){
+        return buttonLeaveAMessage;
+    }
+    
+    public javax.swing.JButton getButtonStopLeavingAMessage(){
+        return buttonStopLeavingAMessage;
     }
 }

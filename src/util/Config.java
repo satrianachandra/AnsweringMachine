@@ -22,9 +22,13 @@ public class Config {
     
     public static final String WELCOME_SOUND = "/home/chandra/NetBeansProjects/AnsweringMachine/lib/voicemailgreetings.mp3";
     
+    
+    
+    //should be moved to a separate class :)
     public static final String LIST_MESSAGE = "ListMessages"; 
     public static final String LIST_MESSAGE_RESULT = "ListMessagesResult";
     public static final String LISTEN_MESSAGE = "PlayMessage";
+    public static final String DELETE_MESSAGE = "DeleteMessage";
     
     
 }

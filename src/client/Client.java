@@ -128,15 +128,25 @@ public final class Client {
 
     public void leaveAMessage(String toName) {
         sipListener.sendLeaveAMessageRequest(toName);
+        guiClient.getButtonStopLeavingAMessage().setEnabled(true);
+        guiClient.getButtonLeaveAMessage().setEnabled(false);
     }
 
     void stopSendingMessage() {
         sipListener.sendBye();
+        guiClient.getButtonLeaveAMessage().setEnabled(true);
+        guiClient.getButtonStopLeavingAMessage().setEnabled(false);
     }
 
     void listenMessage(int selectedMessage) {
         startReceiving();
         sipListener.listenMessage(selectedMessage);
+    }
+
+    void deleteMessage(int selectedMessage) {
+        messagesList.remove(selectedMessage);
+        updateVoiceMailMessagesList(messagesList);
+        sipListener.removeMessage(selectedMessage);
     }
     
 }
