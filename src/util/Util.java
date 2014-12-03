@@ -33,4 +33,13 @@ public class Util {
         }
     }
     
+    public static long getFileSize(String filePath){
+        File file =new File(filePath);
+        if(file.exists()){
+            return file.length();
+        }else{
+            return -1;
+        }
+    }
+    
 }

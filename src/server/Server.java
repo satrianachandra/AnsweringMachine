@@ -57,6 +57,7 @@ import org.gstreamer.Gst;
 import org.gstreamer.GstObject;
 import org.gstreamer.State;
 import util.SdpTool;
+import util.SendMailTLS;
 import util.Util;
 
 /**
@@ -81,6 +82,9 @@ public class Server implements SipListener{
     
     private List<VoiceMessageData>listOfVoiceMessageDatas;
     
+    SendMailTLS sendMail;
+    
+    
     public Server(){
         this.myAddress = Config.serverAddress;
         this.myPort = Config.serverPort;
@@ -94,6 +98,8 @@ public class Server implements SipListener{
         
         init();
         System.out.println("Voice Mail Server listening on "+this.myPort);
+        
+        sendMail =  new SendMailTLS();
         
     }
     
@@ -192,7 +198,12 @@ public class Server implements SipListener{
                 serverTransactionId.sendResponse(response);
                 
                 //stop the receiver, it should actually first search from who:
-                listOfMessageRecorders.get(0).stop();
+                MessageRecorder aMessageRecorder = listOfMessageRecorders.get(0);
+                aMessageRecorder.stopPipeline();
+                //send the mail notification to the callee of this message recorder
+                if (aMessageRecorder.getSavedMessageLocation()!=null){
+                    sendMail.sendmail(aMessageRecorder.getCalleeEmail(), aMessageRecorder.getSavedMessageLocation());
+                }
                 
         } catch (Exception ex) {
                 ex.printStackTrace();
@@ -240,6 +251,10 @@ public class Server implements SipListener{
                     String caller = ((SipUri) ((FromHeader) request
                                 .getHeader("from")).getAddress().getURI())
                                 .getAuthority().getUser();
+                    String callerSipAddress = ((SipUri) ((FromHeader) request
+                                .getHeader("from")).getAddress().getURI())
+                                .getAuthority().getHost().getHostname();
+                    
                     System.out.println("Receive request Message from "+caller);
                     if (messageTypeHeaderString.equalsIgnoreCase(Config.LIST_MESSAGE)){
                         
@@ -259,7 +274,7 @@ public class Server implements SipListener{
                         }
 
                         if (!exist){
-                            listOfVoiceMessageDatas.add(new VoiceMessageData(caller));
+                            listOfVoiceMessageDatas.add(new VoiceMessageData(caller, callerSipAddress));
                             userPosition = listOfVoiceMessageDatas.size()-1;
                         }
                         
@@ -362,9 +377,14 @@ public class Server implements SipListener{
                         String caller = ((SipUri) ((FromHeader) request
                                 .getHeader("from")).getAddress().getURI())
                                 .getAuthority().getUser();
+                        
+                        String calleeSipAddress = ((SipUri) ((ToHeader) request
+                                .getHeader("to")).getAddress().getURI())
+                                .getAuthority().getHost().getHostname();
+                        System.out.println("callee sip address: "+calleeSipAddress);
                         System.out.println("callee " + callee + ", caller " + caller);
                         myRtpListenPort = answerCall(clientAddr, clientRtpPort,
-                                callee, caller);
+                                callee, caller,calleeSipAddress);
                     } else {
                         System.err
                                 .println("Client didn't give any port for audio stream");
@@ -479,9 +499,9 @@ public class Server implements SipListener{
     }
     
     
-    private int answerCall(String clientAddr, int clientRtpPort, String calleeName, String callerName) {
+    private int answerCall(String clientAddr, int clientRtpPort, String calleeName, String callerName, String calleeSipAddress) {
         // prepare and start receiving message
-        final MessageRecorder messageRecorder = new MessageRecorder(callerName, calleeName);
+        final MessageRecorder messageRecorder = new MessageRecorder(callerName, calleeName,calleeSipAddress);
         listOfMessageRecorders.add(messageRecorder);
         
         // send the busy tone
@@ -499,6 +519,7 @@ public class Server implements SipListener{
         // play it
         busyTone.play();
 
+        
         return messageRecorder.getPort();
     }
     

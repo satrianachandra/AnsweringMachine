@@ -15,15 +15,21 @@ import java.util.List;
 public class VoiceMessageData {
     
     private String calleeName;
+    private String sipAddress;
     private List<String>listOfMessagesFile;
+    
+    public String getSipAddress(){
+        return this.sipAddress;
+    }
     
     public VoiceMessageData(String calleeName, List<String> listOfMessagesFile){
         this.calleeName = calleeName;
         this.listOfMessagesFile = listOfMessagesFile;
     }
     
-    public VoiceMessageData(String calleeName){
+    public VoiceMessageData(String calleeName,String sipAddress){
         this.calleeName = calleeName;
+        this.sipAddress = sipAddress;
         this.listOfMessagesFile = new ArrayList<>();
     }
     

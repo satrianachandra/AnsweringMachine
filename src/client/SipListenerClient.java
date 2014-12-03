@@ -307,10 +307,10 @@ public class SipListenerClient implements SipListener{
                 sipProvider.addSipListener(listener);
 
                 String fromName = client.getMyName();
-                String fromSipAddress = "here.com";
+                String fromSipAddress = "gmail.com";
                 String fromDisplayName = client.getMyName();
 
-                String toSipAddress = "there.com";
+                String toSipAddress = "gmail.com";
                 String toUser = "Callee1";
                 String toDisplayName = "The Callee 1";
 
@@ -428,11 +428,7 @@ public class SipListenerClient implements SipListener{
         }
         System.out.println("Sent bye.");
         
-        //stop receiver, dont stop yet
-       // client.getCAReceiver().stop();
         
-        //stop sender
-        client.getCASender().stop();
     }
     
     
@@ -440,10 +436,10 @@ public class SipListenerClient implements SipListener{
         try {
             /////////////
             String fromName = client.getMyName();
-            String fromSipAddress = "here.com";
+            String fromSipAddress = "gmail.com";
             String fromDisplayName = client.getMyName();
 
-            String toSipAddress = "there.com";
+            String toSipAddress = "gmail.com";
             String toUser = toName;
             String toDisplayName = toName;
 
@@ -575,11 +571,11 @@ public class SipListenerClient implements SipListener{
         
         try {
             String fromName = client.getMyName();
-            String fromSipAddress = "here.com";
+            String fromSipAddress = "gmail.com";
             String fromDisplayName = client.getMyName();
             // create From Header
             String toUser = "server";
-            String toSipAddress = "there.com";
+            String toSipAddress = "gmail.com";
             String toDisplayName = "";
 
                 

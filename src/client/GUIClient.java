@@ -243,7 +243,9 @@ public class GUIClient extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonSignInActionPerformed
 
     private void buttonLeaveAMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLeaveAMessageActionPerformed
-        client.leaveAMessage(textFieldToName.getText());
+        if (!textFieldToName.getText().isEmpty()){
+            client.leaveAMessage(textFieldToName.getText());
+        }
     }//GEN-LAST:event_buttonLeaveAMessageActionPerformed
 
     private void buttonStopLeavingAMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonStopLeavingAMessageActionPerformed

@@ -14,6 +14,8 @@ import org.gstreamer.ElementFactory;
 import org.gstreamer.Pad;
 import org.gstreamer.PadLinkReturn;
 import org.gstreamer.Pipeline;
+import org.gstreamer.State;
+import org.gstreamer.StateChangeReturn;
 import util.Util;
 import util.Config;
 
@@ -24,6 +26,16 @@ import util.Config;
 public class MessageRecorder extends Pipeline {
     
     private int port;
+    private String savedMessageLocation;
+    private String calleeEmail;
+    
+    public String getSavedMessageLocation(){
+        return this.savedMessageLocation;
+    }
+    
+    public String getCalleeEmail(){
+        return this.calleeEmail;
+    }
     
     public int getPort(){
         return port;
@@ -33,8 +45,11 @@ public class MessageRecorder extends Pipeline {
         this.port = port;
     }
     
-    public MessageRecorder(String callerName, String calleeName){
+    public MessageRecorder(String callerName, String calleeName, String calleeSipAddress){
         super();
+        
+        //create email address for notification
+        this.calleeEmail = calleeName+"@"+calleeSipAddress;
         
         // create a date to mark the message
         SimpleDateFormat filenameFormatter = new SimpleDateFormat(
@@ -68,13 +83,15 @@ public class MessageRecorder extends Pipeline {
         final Element filesink = ElementFactory.make("filesink", null);
 
         // create the folder if it does not exist
-        if (!new File(Config.MESSAGE_RECORDING_ROOT + calleeName).exists()) {
-
+        final String savedMessageDir = Config.MESSAGE_RECORDING_ROOT + calleeName;
+        if (!new File(savedMessageDir).exists()) {
                 new File(Config.MESSAGE_RECORDING_ROOT + calleeName).mkdirs();
         }
 
-        filesink.set("location", Config.MESSAGE_RECORDING_ROOT + calleeName + "/"
-                        + callerName + "-" + stringDate + ".ogg");
+        
+        this.savedMessageLocation = Config.MESSAGE_RECORDING_ROOT + calleeName + "/"
+                        + callerName + "-" + stringDate + ".ogg";
+        filesink.set("location",savedMessageLocation);
 
         // ############## ADD THEM TO PIPELINE ####################
         addMany(rtpSource, rtpBin, rtpDepay, speexdec, audioresample,
@@ -107,6 +124,20 @@ public class MessageRecorder extends Pipeline {
         port = (Integer) rtpSource.get("port");
         
     }
+    
+    public void stopPipeline(){
+        this.setState(State.NULL);
+        
+        //check filesize
+        if (!(Util.getFileSize(this.savedMessageLocation)>0)) {
+            //delete the file
+            Util.deleteFile(this.savedMessageLocation);
+            System.out.println("the message is deleted because it's 0 size");
+            this.savedMessageLocation = null;
+        }        
+        
+    }
+    
     
     
     

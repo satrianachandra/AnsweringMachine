@@ -133,6 +133,11 @@ public final class Client {
     }
 
     void stopSendingMessage() {
+        //stop receiver, dont stop yet
+        caReceiver.stop();
+        
+        //stop sender
+        caSender.stop();
         sipListener.sendBye();
         guiClient.getButtonLeaveAMessage().setEnabled(true);
         guiClient.getButtonStopLeavingAMessage().setEnabled(false);
