@@ -78,7 +78,7 @@ public class Server implements SipListener{
     /** Main application API */
     //private App app;
 
-    private List<MessageRecorder>listOfMessageRecorders;
+    //private List<MessageRecorder>listOfMessageRecorders;
     
     private List<VoiceMessageData>listOfVoiceMessageDatas;
     
@@ -89,7 +89,7 @@ public class Server implements SipListener{
         this.myAddress = Config.serverAddress;
         this.myPort = Config.serverPort;
         
-        listOfMessageRecorders = new ArrayList<>();
+        //listOfMessageRecorders = new ArrayList<>();
         listOfVoiceMessageDatas = new ArrayList<>();
         
         // initialize GSstreamer with some debug
@@ -198,8 +198,13 @@ public class Server implements SipListener{
                 serverTransactionId.sendResponse(response);
                 
                 //stop the receiver, it should actually first search from who:
-                MessageRecorder aMessageRecorder = listOfMessageRecorders.get(0);
+                String caller = ((SipUri) ((FromHeader) request
+                                .getHeader("from")).getAddress().getURI())
+                                .getAuthority().getUser();
+                VoiceMessageData aVoiceMessageData = getVoiceDataByName(caller);
+                MessageRecorder aMessageRecorder = aVoiceMessageData.getMessageRecorder();
                 aMessageRecorder.stopPipeline();
+                
                 //send the mail notification to the callee of this message recorder
                 if (aMessageRecorder.getSavedMessageLocation()!=null){
                     sendMail.sendmail(aMessageRecorder.getCalleeEmail(), aMessageRecorder.getSavedMessageLocation());
@@ -502,7 +507,8 @@ public class Server implements SipListener{
     private int answerCall(String clientAddr, int clientRtpPort, String calleeName, String callerName, String calleeSipAddress) {
         // prepare and start receiving message
         final MessageRecorder messageRecorder = new MessageRecorder(callerName, calleeName,calleeSipAddress);
-        listOfMessageRecorders.add(messageRecorder);
+        VoiceMessageData aVoiceMessageData = getVoiceDataByName(callerName);
+        aVoiceMessageData.setMessageRecorder(messageRecorder);
         
         // send the busy tone
         final FileStreamer busyTone = new FileStreamer(Config.WELCOME_SOUND,clientAddr, clientRtpPort);

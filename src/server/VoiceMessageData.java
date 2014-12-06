@@ -17,6 +17,15 @@ public class VoiceMessageData {
     private String calleeName;
     private String sipAddress;
     private List<String>listOfMessagesFile;
+    private MessageRecorder messageRecorder;
+    
+    public MessageRecorder getMessageRecorder(){
+        return this.messageRecorder;
+    }
+    
+    public void setMessageRecorder(MessageRecorder messageRecorder){
+        this.messageRecorder = messageRecorder;
+    }
     
     public String getSipAddress(){
         return this.sipAddress;
