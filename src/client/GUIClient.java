@@ -62,10 +62,14 @@ public class GUIClient extends javax.swing.JFrame {
         textFieldToName = new javax.swing.JTextField();
         buttonLeaveAMessage = new javax.swing.JButton();
         buttonStopLeavingAMessage = new javax.swing.JButton();
+        buttonForwardEmail = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        textFieldForwardEmail = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Hi, please input your name");
+        jLabel1.setText("Hi, please input your email:");
 
         jLabel2.setText("VoiceMail App");
 
@@ -101,7 +105,7 @@ public class GUIClient extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(textFieldServerIP, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         panelWelcomeLayout.setVerticalGroup(
             panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,7 +118,7 @@ public class GUIClient extends javax.swing.JFrame {
                 .addGroup(panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textFieldMyName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonSignIn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
                 .addGroup(panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(textFieldServerIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -141,9 +145,9 @@ public class GUIClient extends javax.swing.JFrame {
 
         jLabel4.setText("Wanna leave a message?");
 
-        jLabel5.setText("To");
+        jLabel5.setText("To Email");
 
-        buttonLeaveAMessage.setText("leave a Message");
+        buttonLeaveAMessage.setText("start");
         buttonLeaveAMessage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonLeaveAMessageActionPerformed(evt);
@@ -157,6 +161,28 @@ public class GUIClient extends javax.swing.JFrame {
             }
         });
 
+        buttonForwardEmail.setText("Forward");
+        buttonForwardEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonForwardEmailActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Forward the message ?");
+
+        textFieldForwardEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldForwardEmailActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("refresh");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelMainLayout = new javax.swing.GroupLayout(panelMain);
         panelMain.setLayout(panelMainLayout);
         panelMainLayout.setHorizontalGroup(
@@ -165,29 +191,35 @@ public class GUIClient extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelMainLayout.createSequentialGroup()
-                        .addComponent(labelMainMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelMainMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelMainLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(0, 231, Short.MAX_VALUE))
+                        .addComponent(jLabel6)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMainLayout.createSequentialGroup()
-                        .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelMainLayout.createSequentialGroup()
+                                .addComponent(textFieldToName)
+                                .addGap(18, 18, 18)
+                                .addComponent(buttonStopLeavingAMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelMainLayout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(buttonLeaveAMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelMainLayout.createSequentialGroup()
+                                .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(textFieldForwardEmail)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
                                 .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMainLayout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(textFieldToName))
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(17, 17, 17))
-                            .addGroup(panelMainLayout.createSequentialGroup()
-                                .addComponent(buttonLeaveAMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(89, 89, 89)))
-                        .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(buttonListenMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(buttonDeleteMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
-                            .addComponent(buttonStopLeavingAMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(53, 53, 53))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(buttonListenMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                                        .addComponent(buttonDeleteMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(buttonForwardEmail, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(52, 52, 52))))
         );
         panelMainLayout.setVerticalGroup(
             panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,23 +227,31 @@ public class GUIClient extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(labelMainMessage)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelMainLayout.createSequentialGroup()
                         .addComponent(buttonListenMessage)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(buttonDeleteMessage)))
-                .addGap(26, 26, 26)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buttonDeleteMessage)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonForwardEmail)
+                    .addComponent(textFieldForwardEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
                 .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5)
-                    .addComponent(textFieldToName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(buttonStopLeavingAMessage)
                     .addComponent(buttonLeaveAMessage))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(11, 11, 11)
+                .addGroup(panelMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textFieldToName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonStopLeavingAMessage))
+                .addGap(32, 32, 32))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -226,20 +266,19 @@ public class GUIClient extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelWelcome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(panelMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(panelMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSignInActionPerformed
-        panelWelcome.setVisible(false);
-        panelMain.setVisible(true);
-        System.out.println("myname: "+ textFieldMyName.getText());
-        client.signIn(textFieldMyName.getText());
         if (!textFieldServerIP.getText().equalsIgnoreCase("")){
             Config.serverAddress = textFieldServerIP.getText();
         }
+        client.signIn(textFieldMyName.getText());
     }//GEN-LAST:event_buttonSignInActionPerformed
 
     private void buttonLeaveAMessageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLeaveAMessageActionPerformed
@@ -267,23 +306,44 @@ public class GUIClient extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buttonDeleteMessageActionPerformed
 
+    private void textFieldForwardEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldForwardEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldForwardEmailActionPerformed
+
+    private void buttonForwardEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonForwardEmailActionPerformed
+        int selectedMessage = listMessagesList.getSelectedIndex();
+        if (selectedMessage != -1){
+           String destClient = textFieldForwardEmail.getText();
+           client.forwardMessage(selectedMessage, destClient);
+           
+        }
+    }//GEN-LAST:event_buttonForwardEmailActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        client.refreshMessagesList();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonDeleteMessage;
+    private javax.swing.JButton buttonForwardEmail;
     private javax.swing.JButton buttonLeaveAMessage;
     private javax.swing.JButton buttonListenMessage;
     private javax.swing.JButton buttonSignIn;
     private javax.swing.JButton buttonStopLeavingAMessage;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel labelMainMessage;
     private javax.swing.JList listMessagesList;
     private javax.swing.JPanel panelMain;
     private javax.swing.JPanel panelWelcome;
+    private javax.swing.JTextField textFieldForwardEmail;
     private javax.swing.JTextField textFieldMyName;
     private javax.swing.JTextField textFieldServerIP;
     private javax.swing.JTextField textFieldToName;
@@ -300,4 +360,13 @@ public class GUIClient extends javax.swing.JFrame {
     public javax.swing.JButton getButtonStopLeavingAMessage(){
         return buttonStopLeavingAMessage;
     }
+    
+    public javax.swing.JPanel getPanelWelcome(){
+        return panelWelcome;
+    }
+    
+    public javax.swing.JPanel getPanelMain(){
+        return panelMain;
+    }
+    
 }

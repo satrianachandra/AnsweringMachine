@@ -262,9 +262,7 @@ public class Server implements SipListener{
                     
                     System.out.println("Receive request Message from "+caller);
                     if (messageTypeHeaderString.equalsIgnoreCase(Config.LIST_MESSAGE)){
-                        
-                        
-                        
+
                         //add this user to the voice messages list, if not yet,
                         //this is not a good approach, we actually need to send SIGN_IN message
                         //then add the user into this voice messages list
@@ -335,6 +333,24 @@ public class Server implements SipListener{
                         Util.deleteFile(fileLocation);
                         callersData.getListOfMessagesFile().remove(messageToDelPos);
                         
+                    }else if (messageTypeHeaderString.equalsIgnoreCase(Config.FORWARD_MESSAGE)){
+                        String contentString = new String(request.getRawContent());
+                        String[] contentArray = contentString.split("#");
+                        int messageToForwardPos = Integer.parseInt(contentArray[0]);
+                        String destClient = contentArray[1];
+                        String destClientName = destClient.split("@")[0];
+                        
+                        //get the file to copy
+                        VoiceMessageData callersData = getVoiceDataByName(caller);
+                        String fileName = callersData.getListOfMessagesFile().get(messageToForwardPos);
+                        String fileLocationSrc = Config.MESSAGE_RECORDING_ROOT+caller+"/"+fileName;
+                        
+                        //copy the file to the right place
+                        String fileLocationDest = Config.MESSAGE_RECORDING_ROOT+destClientName+"/"+fileName;
+                        Util.copyFile(fileLocationSrc, fileLocationDest);
+                        
+                        //notify the destuser by email
+                        sendMail.sendmail(destClient, fileLocationDest);
                     }
 
                 }
@@ -388,7 +404,7 @@ public class Server implements SipListener{
                                 .getAuthority().getHost().getHostname();
                         System.out.println("callee sip address: "+calleeSipAddress);
                         System.out.println("callee " + callee + ", caller " + caller);
-                        myRtpListenPort = answerCall(clientAddr, clientRtpPort,
+                        myRtpListenPort = recordMessage(clientAddr, clientRtpPort,
                                 callee, caller,calleeSipAddress);
                     } else {
                         System.err
@@ -504,7 +520,7 @@ public class Server implements SipListener{
     }
     
     
-    private int answerCall(String clientAddr, int clientRtpPort, String calleeName, String callerName, String calleeSipAddress) {
+    private int recordMessage(String clientAddr, int clientRtpPort, String calleeName, String callerName, String calleeSipAddress) {
         // prepare and start receiving message
         final MessageRecorder messageRecorder = new MessageRecorder(callerName, calleeName,calleeSipAddress);
         VoiceMessageData aVoiceMessageData = getVoiceDataByName(callerName);

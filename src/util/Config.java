@@ -25,10 +25,10 @@ public class Config {
     
     
     //should be moved to a separate class :)
-    public static final String LIST_MESSAGE = "ListMessages"; 
-    public static final String LIST_MESSAGE_RESULT = "ListMessagesResult";
-    public static final String LISTEN_MESSAGE = "PlayMessage";
-    public static final String DELETE_MESSAGE = "DeleteMessage";
-    
+    public static final String LIST_MESSAGE = "LIST_MESSAGE"; 
+    public static final String LIST_MESSAGE_RESULT = "LIST_MESSAGE_RESULT";
+    public static final String LISTEN_MESSAGE = "LISTEN_MESSAGE";
+    public static final String DELETE_MESSAGE = "DELETE_MESSAGE";
+    public static final String FORWARD_MESSAGE = "FORWARD_MESSAGE";
     
 }

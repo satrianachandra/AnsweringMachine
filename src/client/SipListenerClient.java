@@ -433,15 +433,20 @@ public class SipListenerClient implements SipListener{
     
     
     public void sendLeaveAMessageRequest(String toName){
+        //currently we assume that sip address = email of users,
+        //just to make it simpler
+        String justTheName = toName.split("@")[0];
+        String justTheHost = toName.split("@")[1];
+        
         try {
             /////////////
             String fromName = client.getMyName();
-            String fromSipAddress = "gmail.com";
+            String fromSipAddress = client.getMyEmail().split("@")[1];
             String fromDisplayName = client.getMyName();
 
-            String toSipAddress = "gmail.com";
-            String toUser = toName;
-            String toDisplayName = toName;
+            String toSipAddress = justTheHost;
+            String toUser = justTheName;
+            String toDisplayName = justTheName;
 
             // create >From Header        
             SipURI fromAddress = addressFactory.createSipURI(fromName,
@@ -681,6 +686,12 @@ public class SipListenerClient implements SipListener{
         String messageType = Config.DELETE_MESSAGE;
         sendMessageRequest(messageType, contentString);
         
+    }
+
+    void forwardMessage(int selectedMessage, String destClient) {
+        String contentString = String.valueOf(selectedMessage)+"#"+destClient;
+        String messageType = Config.FORWARD_MESSAGE;
+        sendMessageRequest(messageType, contentString);
     }
 
     

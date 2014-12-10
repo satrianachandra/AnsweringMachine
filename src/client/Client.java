@@ -21,6 +21,7 @@ public final class Client {
     
     private GUIClient guiClient;
     private String myName;
+    private String myEmail;
     
     private ClientAudioReceiver caReceiver;
     private ClientAudioSender caSender;
@@ -80,38 +81,30 @@ public final class Client {
     }
 
     void signIn(String myName) {
-        this.myName = myName;
-        try{
-            sipListener.init();
-            System.out.println("Voice Mail Client listening on "+sipListener.getPort());
-        }catch(Exception ex){
-            System.out.println(ex);
+        if (myName.contains("@")){ //simple validation for email
+            guiClient.getPanelWelcome().setVisible(false);
+            guiClient.getPanelMain().setVisible(true);
+            
+            this.myName = myName.split("@")[0];
+            this.myEmail = myName;
+            try{
+                sipListener.init();
+                System.out.println("Voice Mail Client listening on "+sipListener.getPort());
+            }catch(Exception ex){
+                System.out.println(ex);
+            }
         }
+        
     }
     
     public String getMyName(){
         return myName;
     }
     
-    public static void main(String []args){
-        
-        
-        //start the server
-        Server server = new Server();
-        System.out.println("server created");
-        
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
-        //start the client
-        Client client = new Client();
-        System.out.println("client started");
-        
+    public String getMyEmail(){
+        return myEmail;
     }
+    
     
     public void updateVoiceMailMessagesList(List<String> list) {
         messagesList = list;
@@ -127,9 +120,11 @@ public final class Client {
     }
 
     public void leaveAMessage(String toName) {
-        sipListener.sendLeaveAMessageRequest(toName);
-        guiClient.getButtonStopLeavingAMessage().setEnabled(true);
-        guiClient.getButtonLeaveAMessage().setEnabled(false);
+        if (toName.contains("@")){ //simple validation for email
+            sipListener.sendLeaveAMessageRequest(toName);
+            guiClient.getButtonStopLeavingAMessage().setEnabled(true);
+            guiClient.getButtonLeaveAMessage().setEnabled(false);
+        }
     }
 
     void stopSendingMessage() {
@@ -153,5 +148,37 @@ public final class Client {
         updateVoiceMailMessagesList(messagesList);
         sipListener.removeMessage(selectedMessage);
     }
+    
+    void forwardMessage(int selectedMessage, String destClient) {
+        if (destClient.contains("@")){ //simple checking for email field
+            sipListener.forwardMessage(selectedMessage,destClient);
+        }
+    }
+
+    void refreshMessagesList() {
+        sipListener.sendMessagesListRequest();
+    }
+    
+    
+    
+    public static void main(String []args){
+        
+        
+        //start the server
+        Server server = new Server();
+        System.out.println("server created");
+        
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        //start the client
+        Client client = new Client();
+        System.out.println("client started");
+    }
+
     
 }
